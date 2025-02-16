@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+:root{
+  --text:white;
+  --bgclr:rgb(8, 135, 254);
+  --spbgclr:purple;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  padding: 2rem 2rem;
+}
+
+/* Brand */
+.brand {
+ 
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+}
+
+.brand h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.brand h1 span {
+  color: var(--bgclr);
+}
+
+/* Navigation */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  background: rgba(42, 138, 255, 0.1);
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  border: 2px solid rgba(69, 141, 250, 0.3);
+  backdrop-filter: blur(15px);
+  transition: 0.4s ease-in-out;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.nav-list ul li {
+  position: relative;
+}
+
+.nav-list ul li a {
+  font-size: 1.8rem;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-list ul li a:hover {
+  color: var(--bgclr);
+}
+
+.nav-list ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: var(--bgclr);
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-list ul li a:hover::before {
+  width: 100%;
+}
+
+/* Register Button */
+.register-btn {
+  font-size: 1.8rem;
+  padding: 0.8rem 2rem;
+  border: 2px solid var(--bgclr);
+  color: var(--bgclr);
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.register-btn:hover {
+  background: var(--bgclr);
+  color: black;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 0;
+    padding: 2rem 0;
+    transition: left 0.5s ease-in-out;
+  }
+
+  .nav-list.active {
+    left: 0;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
