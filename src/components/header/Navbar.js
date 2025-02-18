@@ -7,11 +7,11 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="brand">
+ {/*      <div className="brand">
         <h1>
           <span>INN</span>VENIOX
         </h1>
-      </div> 
+      </div>  */}
       
       <nav className={`nav-list ${menuOpen ? "active" : ""}`}>
         <ul>
@@ -43,7 +43,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <button className="btn">Register</button>
+    {/*   <button className="btn">Register</button> */}
 
       <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
         <span className="bar"></span>
