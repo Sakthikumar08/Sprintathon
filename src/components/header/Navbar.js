@@ -22,12 +22,12 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="about" spy={true} smooth={true} offset={-70} duration={500} onClick={() => setMenuOpen(false)}>
-              About
+              Domain
             </Link>
           </li>
           <li>
             <Link to="projects" spy={true} smooth={true} offset={-70} duration={500} onClick={() => setMenuOpen(false)}>
-              Projects
+              Sponsors
             </Link>
           </li>
           <li>
@@ -35,10 +35,15 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link to="contact" spy={true} smooth={true} offset={-70} duration={500} onClick={() => setMenuOpen(false)}>
+              Rules
+            </Link>
+          </li>
         </ul>
       </nav>
 
-      <button className="register-btn">Register</button>
+      <button className="btn">Register</button>
 
       <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
         <span className="bar"></span>

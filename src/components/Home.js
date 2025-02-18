@@ -1,6 +1,6 @@
 import React from 'react';
 import "./HomePage.css";
-
+import sjcelogo from "../assets/sjcelogo1.png"
 
 const Home = () => {
   return (
@@ -11,12 +11,11 @@ const Home = () => {
         <source src="/videos/bg-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className='clg-name'>
-        <div className='home-img'></div>
-        <div></div>
-        <div className='home-img'></div>
-      </div>
+       <div className='sjcelogo'>
+        <img src={sjcelogo} alt=""/>
+       </div>
     </div>
+    
     </>
   )
 }

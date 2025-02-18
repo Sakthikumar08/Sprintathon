@@ -19,6 +19,17 @@
     object-fit: cover;
     z-index: -1;
   }
+  .sjcelogo img{
+    width: 600px;
+  
+  }
+  .sjcelogo{
+    display: flex;
+    margin-top: 80px;
+    padding-left: 20px;
+    justify-content: center;
+  }
+
   
 
   
