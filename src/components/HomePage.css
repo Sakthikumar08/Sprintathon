@@ -1,6 +1,11 @@
-*{
+/* *{
     margin: 0%;
     padding: 0%;
+}
+:root{
+  --text:white;
+  --bgclr:rgb(8, 135, 254);
+  --spbgclr:purple;
 }
 
 .home-container {
@@ -28,6 +33,149 @@
     margin-top: 80px;
     padding-left: 20px;
     justify-content: center;
+  } */
+  @font-face {
+    font-family: "Pixel";
+    src: url("../assets/legolas-pixel/legolas-pixel.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Lith";
+    src: url("../assets/emulogic_Vlxoj/Emulogic/EmulogicRegular/Emulogic\ Regular.ttf") format("truetype");
+  }
+  .sjcelogo img{
+    width: 600px;
+  
+  }
+  .sjcelogo{
+    display: flex;
+    margin-top: 80px;
+    padding-left: 20px;
+    justify-content: center;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .home {
+    min-height: 100vh;
+    background: url("../assets/home-bg.jpg")
+      center / cover no-repeat fixed;
+    color: white;
+    font-family: "Pixel", monospace;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .logos {
+    display: flex;
+    justify-content: center;
+    gap: 20rem;
+    margin-bottom: 2rem;
+  }
+  
+  .college-logo,
+  .years-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  
+  .college-info {
+    margin-bottom: 3rem;
+  }
+  
+  .college-name {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sub-text {
+    font-size: 3rem;
+    margin-top:-1rem;
+    opacity: 0.9;
+    letter-spacing: 1px;
+  }
+  
+  .title {
+    font-family: "Pixel", monospace;
+    font-size: 21rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    letter-spacing: 10px;
+    position: relative;
+    font-weight: 450;
+    
+  }
+  .title span{
+    font-size: 30rem;
+  }
+  
+  
+  .subtitle {
+    font-size: 1.5rem;
+    font-family: "Lith", monospace;
+    margin-top: -60px;
+    margin-left: 20px;
+    margin-bottom: 7rem;
+    letter-spacing: 1px;
+  }
+  
+  .register-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 1rem 3rem;
+    font-family: "Pixel", monospace;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+  }
+  
+  .register-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    
+  
+    .logos {
+      gap: 5rem;
+    }
+  
+    .title {
+      font-size: 3rem;
+    }
+  
+    .subtitle {
+      font-size: 1rem;
+    }
+  
+    .college-name {
+      font-size: 1rem;
+    }
+  
+    .sub-text {
+      font-size: 0.8rem;
+    }
   }
 
   

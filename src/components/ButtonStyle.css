@@ -1,11 +1,15 @@
-.btn {
-    background-color: rgb(8, 135, 254);
+
+:root{
+  --bg:#733e7b;
+  --bg-n:#b95fd6;
+}.btn {
+    background-color: var(--bg-n);
     border: none;
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
     /* font-family: 'BenchNine', Arial, sans-serif; */
-   
+   font-family: "lith",monospace;
     font-size: 15px;
     line-height: 1em;
     margin: 15px 40px;
@@ -30,7 +34,7 @@
   }
   
   .btn:before {
-    border-color: rgb(8, 135, 254);
+    border-color: var(--bg-n);
     border-top-width: 2px;
     left: 0px;
     top: -5px;
@@ -38,7 +42,7 @@
   
   .btn:after {
     border-bottom-width: 2px;
-    border-color: rgb(8, 135, 254);
+    border-color: var(--bg-n);
     bottom: -5px;
     right: 0px;
   }

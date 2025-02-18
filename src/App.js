@@ -7,6 +7,7 @@ import Prize from "./components/Prize";
 import Rules from "./components/Rules";
 import Sponsors from "./components/Sponsors";
 import Contact from './components/Contact';
+import Ourteam from "./components/Ourteam";
 
 function App() {
   return (
@@ -14,11 +15,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/track" element={<Domain />} />
+        <Route path="/domain" element={<Domain />} />
         <Route path="/prize" element={<Prize />} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/ourteam" element={<Ourteam />} />
       </Routes>
     </Router>
   );
