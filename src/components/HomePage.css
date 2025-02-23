@@ -42,6 +42,10 @@
     font-family: "Lith";
     src: url("../assets/emulogic_Vlxoj/Emulogic/EmulogicRegular/Emulogic\ Regular.ttf") format("truetype");
   }
+  @font-face {
+    font-family: "sakthi";
+    src: url("../assets/04b_30/04B_30__.TTF") format("truetype");
+  }
   .sjcelogo img{
     width: 600px;
   
@@ -136,27 +140,92 @@
     letter-spacing: 1px;
   }
   
-  .register-btn {
-    background: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 1rem 3rem;
-    font-family: "Pixel", monospace;
-    font-size: 1.2rem;
+:root{
+  --bg:#733e7b;
+  --bg-n:#b95fd6;
+}
+.btn {
+    background-color: var(--bg-n) ;
+    border: none;
+    color: #ffffff;
     cursor: pointer;
-    transition: all 0.3s ease;
-    letter-spacing: 2px;
+    display: inline-block;
+    font-family: "lith",monospace;
+    font-size: 15px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 12px 30px 12px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
   }
   
-  .register-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  .btn:before,
+  .btn:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
   }
   
+  .btn:before {
+    border-color: var(--bg-n);
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+  }
+  
+  .btn:after {
+    border-bottom-width: 2px;
+    border-color: var(--bg-n) ;
+    bottom: -5px;
+    right: 0px;
+  }
+  
+  .btn:hover,
+  .btn.hover {
+    background-color: #f7f6f5;
+    color:black;
+  }
+  
+  .btn:hover:before,
+  .btn.hover:before,
+  .btn:hover:after,
+  .btn.hover:after {
+    height: 100%;
+    width: 100%;
+    border-color: white;
+  }
+  .about-title{
+    font-family: "sakthi",monospace;
+    font-size: 8rem;
+    color:yellow;
+    padding-left: 600px;
+    margin-top: 7rem;
+  }
+  .about-text{
+    background: rgba(45, 5, 54, 0.4);
+    margin: 80px auto;
+    padding: 45px;
+    width:900px;
+    border-radius: 7px;
+    border: 0.5px solid var(--bg);
+    line-height: 250%;
+    margin-bottom: 185px;
+  }
+  .about-text p{
+    font-family: "Lithi",monospace;
+    font-size: 2rem;
+  }
+
   @media (max-width: 768px) {
     
-  
     .logos {
       gap: 5rem;
     }

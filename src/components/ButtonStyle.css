@@ -3,7 +3,7 @@
   --bg:#733e7b;
   --bg-n:#b95fd6;
 }.btn {
-    background-color: var(--bg-n);
+    background-color: var(--bg-n) ;
     border: none;
     color: #ffffff;
     cursor: pointer;
@@ -42,7 +42,7 @@
   
   .btn:after {
     border-bottom-width: 2px;
-    border-color: var(--bg-n);
+    border-color: var(--bg-n) ;
     bottom: -5px;
     right: 0px;
   }
