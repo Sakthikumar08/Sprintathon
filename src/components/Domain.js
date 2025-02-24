@@ -1,16 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./DomainStyle.css";
 import Cards from "./Cards";
-import Logoscroll from "./Logoscroll";
 
 const Domain = () => {
+ 
+
   return (
     <div className="domain">
-      
-      
-        <Cards />
-        <Logoscroll />
-      
+     <Cards/>
     </div>
   );
 };

@@ -5,29 +5,29 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
-import "./CardsStyle.css"; // Import CSS file
+import "./CardsStyle.css";
+import droneImage from "../assets/icons8-drone-64.png"; // Ensure this image exists in your assets folder
 
 const cardData = [
-  "Card 1",
-  "Card 2",
-  "Card 3",
-  "Card 4",
-  "Card 5",
-  "Card 6",
-  "Card 7",
-  "Card 8",
-  "Card 9",
-  "Card 10",
-  "Card 11",
-  "Card 12",
+  { name: "Clean and Renewable Energy", icon: "fa-leaf" },
+  { name: "Health", icon: "fa-heartbeat" },
+  { name: "Waste Management", icon: "fa-recycle" },
+  { name: "Agriculture", icon: "fa-tractor" },
+  { name: "Smart Education", icon: "fa-graduation-cap" },
+  { name: "Cybersecurity", icon: "fa-lock" },
+  { name: "AR & VR", icon: "fa-glasses" },
+  { name: "Space Tech & Sat Comm", icon: "fa-satellite" },
+  { name: "Ocean Technology", icon: "fa-ship" },
+  { name: "Drone Technology", image: droneImage }, // Added image for Drone Technology
+  { name: "VLSI", icon: "fa-microchip" },
+  { name: "Student Innovation", icon: "fa-lightbulb" },
 ];
 
 const Cards = () => {
   return (
     <div className="cards-grid">
-      {cardData.map((title, index) => (
-        <TiltCard key={index} title={title} />
+      {cardData.map((data, index) => (
+        <TiltCard key={index} name={data.name} icon={data.icon} image={data.image} />
       ))}
     </div>
   );
@@ -36,7 +36,7 @@ const Cards = () => {
 const ROTATION_RANGE = 20;
 const HALF_ROTATION_RANGE = ROTATION_RANGE / 2;
 
-const TiltCard = ({ title }) => {
+const TiltCard = ({ name, icon, image }) => {
   const ref = useRef(null);
 
   const x = useMotionValue(0);
@@ -79,10 +79,18 @@ const TiltCard = ({ title }) => {
       }}
       className="tilt-card"
     >
-      <div className="tilt-card-inner">
-        <FiMousePointer className="icon" />
-        <p className="hover-text">{title}</p>
-      </div>
+      {/* Bottom Corners */}
+  <div className="bottom-left"></div>
+  <div className="bottom-right"></div>
+
+  <div className="tilt-card-inner">
+    {image ? (
+      <img src={image} alt={name} className="drone-image" />
+    ) : (
+      <i className={`fa ${icon} icon`}></i>
+    )}
+    <p className="hover-text">{name}</p>
+  </div>
     </motion.div>
   );
 };
