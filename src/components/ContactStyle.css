@@ -56,8 +56,8 @@ body {
 }
 
 .cont-head {
-  font-family: "Pixel", monospace;
-  font-size: 4rem;
+  font-family: "Sakthi", monospace;
+  font-size: 2rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 20px;
@@ -81,8 +81,9 @@ body {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  background: var(--glass);
-  border: 2px solid var(--accent);
+  background: rgba(37, 4, 40, 0.3);
+
+  border: 0.8px solid var(--accent);
   backdrop-filter: blur(8px);
   box-shadow: 0px 0px 10px var(--accent);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -275,34 +276,6 @@ body {
   color: var(--neon);
 }
 
-/* Toggle Buttons */
-.toggle-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
-}
-
-.toggle-buttons button {
-  background: #333;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-  transition: background 0.3s ease;
-}
-
-.toggle-buttons .active {
-  background: #f8b400;
-  color: black;
-}
-
-.toggle-buttons button:hover {
-  background: #f8b400;
-  color: black;
-}
 
 /* Form Inputs */
 .contact-form-section form {
@@ -311,19 +284,7 @@ body {
   gap: 15px;
 }
 
-.contact-form-section input,
-/* .contact-form-section textarea {
-  width: 100%;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 4px;
-  font-size: 9px;
-  background: rgb(34, 19, 39);
-  color: white;
-  font-family: "Lith" ,monospace;
-  font-weight: 400;
-  outline: none;
-} */
+
 
 .contact-form-section textarea {
   resize: none;
@@ -368,7 +329,7 @@ body {
 
 
 /* Submit Button */
-.contact-form-section button[type="submit"] {
+/* .contact-form-section button[type="submit"] {
   padding: 12px;
   border: none;
   border-radius: 5px;
@@ -381,7 +342,7 @@ body {
 
 .contact-form-section button[type="submit"]:hover {
   background: #d99a00;
-}
+} */
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -398,3 +359,68 @@ body {
       flex-direction: column;
   }
 }
+/* button */
+
+:root{
+  --bg:#733e7b;
+  --bg-n:#b95fd6;
+}.btn {
+    background-color: var(--bg-n) ;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    /* font-family: 'BenchNine', Arial, sans-serif; */
+   font-family: "lith",monospace;
+    font-size: 15px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 12px 30px 12px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .btn:before,
+  .btn:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  
+  .btn:before {
+    border-color: var(--bg-n);
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+  }
+  
+  .btn:after {
+    border-bottom-width: 2px;
+    border-color: var(--bg-n) ;
+    bottom: -5px;
+    right: 0px;
+  }
+  
+  .btn:hover,
+  .btn.hover {
+    background-color: #f7f6f5;
+    color:black;
+  }
+  
+  .btn:hover:before,
+  .btn.hover:before,
+  .btn:hover:after,
+  .btn.hover:after {
+    height: 100%;
+    width: 100%;
+    border-color: white;
+  }
+  

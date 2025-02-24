@@ -24,33 +24,11 @@ const cardData = [
 ];
 
 const Cards = () => {
-  const scrollRef = useRef(null);
-
-  const scrollLeft = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="carousel-container">
-      <button className="scroll-button left" onClick={scrollLeft}>
-      <i class="fa-solid fa-arrow-left"></i>
-      </button>
-      <div className="cards-wrapper" ref={scrollRef}>
-        {cardData.map((title, index) => (
-          <TiltCard key={index} title={title} />
-        ))}
-      </div>
-      <button className="scroll-button right" onClick={scrollRight}>
-      <i class="fa-solid fa-arrow-right"></i>
-      </button>
+    <div className="cards-grid">
+      {cardData.map((title, index) => (
+        <TiltCard key={index} title={title} />
+      ))}
     </div>
   );
 };

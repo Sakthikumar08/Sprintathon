@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
+import "./DomainStyle.css";
 import Cards from "./Cards";
-import Logoscroll from './Logoscroll';
+import Logoscroll from "./Logoscroll";
 
 const Domain = () => {
   return (
-    <div  className="home-container">
-     
-   
-    <Cards />
-    <Logoscroll />
-  </div>
-  )
-}
+    <div className="domain">
+      
+      
+        <Cards />
+        <Logoscroll />
+      
+    </div>
+  );
+};
 
-export default Domain
+export default Domain;
