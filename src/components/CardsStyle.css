@@ -55,7 +55,7 @@
 }
 
 .tilt-card:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
 }
@@ -164,5 +164,75 @@
 @media (max-width: 480px) {
   .cards-grid {
     grid-template-columns: repeat(1, 1fr); /* One column on mobile */
+  }
+}
+
+/* Blur effect when popup is active */
+.blur-bg {
+  filter: blur(8px);
+  pointer-events: none; /* Prevent interaction with blurred content */
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  backdrop-filter: blur(8px); /* Blurs background */
+}
+
+.modal {
+  width: 500px;
+  height: 600px;
+  background: rgba(43, 36, 93, 0.95);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  position: relative;
+  text-align: center;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Modal Content */
+.modal-content {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  color: var(--neon);
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+/* Responsive Modal */
+@media (max-width: 480px) {
+  .modal {
+    width: 90%;
+    height: 80%;
   }
 }

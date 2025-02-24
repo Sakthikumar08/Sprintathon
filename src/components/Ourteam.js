@@ -1,8 +1,9 @@
 import React from 'react'
-import Profile from "./Profile"
+import Profile from "./Profile";
+import './OurteamStyle.css';
 const Ourteam = () => {
   return (
-    <div>
+    <div className='ourteam'>
       <Profile />
     </div>
   )
