@@ -1,13 +1,23 @@
 import React from "react";
 import "./profileStyle.css"; 
 import sakthi from "../assets/profile.png";
-import lakshmi from "../assets/lakshmi.png"
+import lakshmi from "../assets/lakshmin.png";
+import Lithin from "../assets/lithin.png";
+import pranav from "../assets/pranav.png";
+import ajitha from "../assets/ajitha.png";
+import Pk from "../assets/prabuk.png"
+import shriram from "../assets/shriram.png"
+import venky from "../assets/venky.png"
 
 const coordinators = [
   { name: "Sakthi Kumar", image: sakthi },
-  { name: "Lithin ", image: "https://www.kurukshetraceg.org.in/images/team/Christ.png" },
-  { name: "Venky ", image: "https://www.kurukshetraceg.org.in/images/team/Moni.png" },
+  { name: "Lithin ", image: Lithin },
+  { name: "Pranav", image: pranav },
+  { name: "PK ", image: Pk },
+  { name: "Venky ", image: venky },
   { name: "Lakshmi ", image: lakshmi },
+  { name: "Ajitha", image: ajitha },
+  { name: "Shriram", image: shriram },
 ];
 
 const Profile = () => {

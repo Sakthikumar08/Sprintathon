@@ -12,10 +12,7 @@ const cardData = [
   {
     name: "Clean and Renewable Energy",
     icon: "fa-leaf",
-    description: "Automatic Energy Saving System: Develop a centralized monitoring system for street lights that can automatically detect faults like non-functioning lights, current leakage, and cable breakage, reducing reliance on citizen complaints and improving efficiency.",
-    additionalInfo: "Solar Efficient System: Build a software platform to monitor and optimize the performance of solar panels, ensuring maximum energy generation and reducing maintenance costs.",
-    sdg: "SDG 7: Affordable Energy, SDG 11: Sustainable Cities",
-    category: "Hardware/Software"
+   
   },
   { name: "Health", icon: "fa-heartbeat" },
   { name: "Waste Management", icon: "fa-recycle" },

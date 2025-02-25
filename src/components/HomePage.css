@@ -89,9 +89,6 @@
     font-weight: 600;
     position: relative;
     text-align: center;
-   
-    
-    
 }
 
 /* First Letter Effect */
@@ -211,28 +208,108 @@
     font-family: "Lithi",monospace;
     font-size: 2rem;
   }
-
-  @media (max-width: 768px) {
-    
-    .logos {
-      gap: 5rem;
+  @media (max-width: 568px) {
+    .sjcelogo{
+      margin-top: 70px;
+      padding-right: 20px;
+    } 
+    .sjcelogo img{
+      width: 300px;
     }
-  
     .title {
-      font-size: 3rem;
-    }
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      margin-top: 3rem;
+  }
+  .title span {
+    font-size: 4rem;
+  }
+
+.subtitle {
+  font-size: 0.7rem;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 3rem;
+
+}
+}
+/* button */
+@media (max-width: 780px){
+  .btn {
+    font-size: 8px;
+    line-height: 1em;
+    margin: 15px 40px;
+    outline: none;
+    padding: 10px 20px 10px;
+    
+  }
   
-    .subtitle {
+  .btn:before,
+  .btn:after {
+    border-color: transparent;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    border-style: solid;
+    border-width: 0;
+    content: '';
+    height: 24px;
+    position: absolute;
+    width: 24px;
+  }
+  .btn:before {
+    border-color: var(--bg-n);
+    border-top-width: 2px;
+    left: 0px;
+    top: -5px;
+  }
+  
+  .btn:after {
+    border-bottom-width: 2px;
+    border-color: var(--bg-n) ;
+    bottom: -5px;
+    right: 0px;
+  }
+  
+  .btn:hover,
+  .btn.hover {
+    background-color: #f7f6f5;
+    color:black;
+  }
+  
+  .btn:hover:before,
+  .btn.hover:before,
+  .btn:hover:after,
+  .btn.hover:after {
+    height: 100%;
+    width: 100%;
+    border-color: white;
+  }
+}
+/* about */
+  @media (max-width: 568px) {
+    .about-title{
+      font-size: 4rem;
+      color:yellow;
+     text-align: center;
+     padding-left: 0;
+      margin-top: 5rem;
+    }
+    .about-text{
+      background: rgba(45, 5, 54, 0.4);
+      margin: 40px auto;
+      padding: 10px;
+      width:300px;
+      border-radius: 4px;
+      border: 0.5px solid var(--bg);
+      line-height: 200%;
+      margin-bottom: 50px;
+      
+    }
+    .about-text p{
+      font-family: "Lithi",monospace;
       font-size: 1rem;
     }
-  
-    .college-name {
-      font-size: 1rem;
-    }
-  
-    .sub-text {
-      font-size: 0.8rem;
-    }
+   
   }
 
   
