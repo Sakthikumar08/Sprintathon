@@ -64,7 +64,13 @@ const Contact = () => {
     }
   };
   return (
+    <div className='contact-container'>
+    <video autoPlay loop muted className="background-video">
+    <source src="/videos/bg-vid.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
     <div className='contact'>
+    
       <div className='cont-item'>
         <h1 className='cont-head'>Staff Co-ordinator</h1>
         <div className="staff-container">
@@ -146,6 +152,7 @@ const Contact = () => {
                 <span>{result}</span>
             </div>
             </div>
+    </div>
     </div>
   );
 }

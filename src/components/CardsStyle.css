@@ -1,18 +1,6 @@
 /* Importing Custom Fonts */
-@font-face {
-  font-family: "Pixel";
-  src: url("../assets/legolas-pixel/legolas-pixel.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
-@font-face {
-  font-family: "Lith";
-  src: url("../assets/emulogic_Vlxoj/Emulogic/EmulogicRegular/Emulogic\ Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Sakthi";
-  src: url("../assets/04b_30/04B_30__.TTF") format("truetype");
-}
 
 /* Global Reset */
 * {
@@ -107,7 +95,7 @@
 .tilt-card-inner {
   text-align: center;
   color: #fff;
-  font-family: "Lith",monospace;
+ 
 }
 
 .icon {
@@ -117,9 +105,10 @@
 }
 
 .hover-text {
-  font-size: 10px;
-  color: var(--accent);
-  font-family: "Lith",monospace;
+  font-size: 15px;
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
 }
 
 

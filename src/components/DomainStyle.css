@@ -1,17 +1,4 @@
-@font-face {
-    font-family: "Pixel";
-    src: url("../assets/legolas-pixel/legolas-pixel.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Lith";
-    src: url("../assets/emulogic_Vlxoj/Emulogic/EmulogicRegular/Emulogic\ Regular.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Sakthi";
-    src: url("../assets/04b_30/04B_30__.TTF") format("truetype");
-  }
+
   
   * {
     margin: 0;

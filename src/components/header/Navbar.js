@@ -12,9 +12,9 @@ const Navbar = () => {
           <li>
             <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           </li>
-          <li>
+{/*           <li>
             <Link to="/domain" onClick={() => setMenuOpen(false)}>Domain</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/prize" onClick={() => setMenuOpen(false)}>Prize</Link>
           </li>
@@ -27,9 +27,9 @@ const Navbar = () => {
           <li>
             <Link to="/rules" onClick={() => setMenuOpen(false)}>Rules</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/ourteam" onClick={() => setMenuOpen(false)}>Our Team</Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
 

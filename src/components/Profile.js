@@ -1,13 +1,14 @@
 import React from "react";
 import "./profileStyle.css"; 
-import sakthi from "../assets/profile.png";
+import sakthi from "../assets/sakthi.png";
 import lakshmi from "../assets/lakshmin.png";
 import Lithin from "../assets/lithin.png";
 import pranav from "../assets/pranav.png";
 import ajitha from "../assets/ajitha.png";
 import Pk from "../assets/prabuk.png"
 import shriram from "../assets/shriram.png"
-import venky from "../assets/venky.png"
+import venky from "../assets/venky.png";
+import franesh from "../assets/franesh.png"
 
 const coordinators = [
   { name: "Sakthi Kumar", image: sakthi },
@@ -18,6 +19,7 @@ const coordinators = [
   { name: "Lakshmi ", image: lakshmi },
   { name: "Ajitha", image: ajitha },
   { name: "Shriram", image: shriram },
+  { name: "Franesh", image: franesh },
 ];
 
 const Profile = () => {

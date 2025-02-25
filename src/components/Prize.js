@@ -9,15 +9,15 @@ const Prize = () => {
     <div className="prize-container">
       {/* Background Video */}
       <video autoPlay loop muted className="background-video">
-        <source src="/videos/prize-bg.mp4" type="video/mp4" />
+        <source src="/videos/bg-vid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       {/* Scrollable Content */}
       <div className="prize-scroll-container">
-        <h1 className="prize-title">🏆 Prize Distribution 🏆</h1>
+        <h1 className="prize-title">Prize Distribution 🏆</h1>
 
-        {/* Prize Cards */}
+        {/* Prize Cards Section */}
         <div className="prize-cards">
           {/* 2nd Prize */}
           <div className="prize-card second-prize">
@@ -40,10 +40,18 @@ const Prize = () => {
             <p>Prize: ₹25,000</p>
           </div>
         </div>
+
+        {/* Prize Pool Section */}
+        <div className="prize-pool">
+          <h2>🏅 Prize Pool of ₹75,000 🏅</h2>
+          <p>
+            🎓 Exciting Internship Offers with a Total Stipend of ₹2,24,000 💼 <br />
+            🎟 Course Certification Vouchers Worth <strong>$20,000</strong> for All Participants!
+          </p>
+        </div>
       </div>
     </div>
   );
 };
-
 
 export default Prize;

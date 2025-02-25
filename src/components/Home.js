@@ -1,6 +1,6 @@
 import React from 'react';
 import "./HomePage.css";
-import sjcelogo from "../assets/logo-sj.png";
+import sjcelogo from "../assets/sjcelogo1.png";
 import Timeline from "./Timeline"
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
     <div className="home">
       {/* Video Background */}
       <video autoPlay loop muted className="bg-video">
-        <source src="/videos/home-bg.mp4" type="video/mp4" />
+        <source src="/videos/bg-vid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 

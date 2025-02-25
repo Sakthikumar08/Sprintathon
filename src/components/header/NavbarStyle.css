@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 :root{
   --text:white;
-  --bgclr:rgb(8, 135, 254);
+  --bgclr:#d900ff;
   --spbgclr:purple;
 }
 * {
@@ -53,10 +53,10 @@ body {
 .nav-list {
   display: flex;
   justify-content: center;
-  background: rgba(42, 138, 255, 0.1);
+  background: rgba(151, 10, 216, 0.1);
   padding: 0.8rem 2rem;
   border-radius: 12px;
-  border: 2px solid rgba(69, 141, 250, 0.3);
+  border: 2px solid rgba(153, 13, 228, 0.3);
   backdrop-filter: blur(15px);
   transition: 0.4s ease-in-out;
 }
