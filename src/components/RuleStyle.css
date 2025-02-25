@@ -169,9 +169,58 @@
   /* Rule Text */
   .rule-text {
     flex: 1;
-    font-size: 3rem;
+    font-size: 1rem;
     letter-spacing: 120%;
+    line-height: 20px;
     color: var(--text);
-    font-family: "Pixel", monospace;
+    font-family: "Lith", monospace;
   }
-  
+  /* Responsive Design */
+@media (max-width: 768px) {
+  .rules-title {
+      font-size: 1.2rem;
+  }
+  .rules-list {
+      width: 98%;
+  }
+  .rule-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+  }
+  .rule-number {
+      font-size: 2rem;
+  }
+  .rule-text {
+      font-size: 1rem;
+      letter-spacing: normal;
+      line-height: 15px;
+  }
+  .corner {
+      width: 15px;
+      height: 15px;
+  }
+  .rule-card-wrapper:hover .corner {
+      width: 20px;
+      height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-title {
+      font-size: 1.2rem;
+  }
+  .rule-card {
+      font-size: 1rem;
+  }
+  .rule-number {
+      font-size: 2rem;
+  }
+  .rule-text {
+      font-size: 1rem;
+  }
+  .corner {
+      width: 10px;
+      height: 10px;
+  }
+}

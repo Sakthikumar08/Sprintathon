@@ -4,7 +4,7 @@ import "./RuleStyle.css";
 const Rules = () => {
   return (
     <div className="rules-container">
-      <h1 className="rules-title">⚡ HACKATHON RULES & REGULATIONS ⚡</h1>
+      <h1 className="rules-title">⚡RULES & REGULATIONS⚡</h1>
 
       <div className="rules-list">
         {[
