@@ -1,6 +1,7 @@
 import React from 'react';
 import "./HomePage.css";
-import sjcelogo from "../assets/sjcelogo1.png";
+import sjcelogo from "../assets/logo-sj.png";
+import Timeline from "./Timeline"
 
 function Home() {
   return (
@@ -16,11 +17,12 @@ function Home() {
           <img src={sjcelogo} alt="SJCELogo" />
         </div>
 
-        <h1 className="title"><span>I</span>nnvenio-X</h1>
+        <h1 className="title"><span>S</span>printathon'25</h1>
         <p className="subtitle">A 24 HOURS NATIONAL LEVEL HACKATHON</p>
 
-        <button className="btn">REGISTER NOW</button>
+        <a href="https://forms.gle/bF1p6XJcMhRRZ9F46" ><button className="btn">REGISTER NOW</button></a>
       </div>
+      <Timeline />
       <div>
         <h1 className='about-title'>About us</h1>
         <div className='about-text'>
