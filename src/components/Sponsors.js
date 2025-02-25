@@ -19,7 +19,7 @@ const sponsors = [
 const Sponsors = () => {
   return (
     <div className="sponsor">
-      <h2 className="sponsor-title">💡 Our Sponsors 🚀</h2>
+      <h2 className="sponsor-title">💡 Our Sponsors</h2>
       <div className="sponsor-container">
         {sponsors.map((sponsor, index) => (
           <div key={index} className="sponsor-card">

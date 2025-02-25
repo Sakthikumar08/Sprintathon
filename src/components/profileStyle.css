@@ -97,3 +97,40 @@
 .profile-card:hover .profile-name {
   color: var(--neon);
 }
+
+@media (max-width: 668px){
+  .profile-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    perspective: 1000px;
+  }
+  .profile-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(44, 154, 227, 0.3), rgba(0, 0, 0, 0.8));
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+    padding: 8px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    overflow: hidden;
+  }
+  /* Profile Image */
+.profile-image {
+  width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.profile-name {
+  margin-top: 12px;
+  font-size: 10px;
+ font-family: "Sakthi" ,monospace;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+  transition: 0.3s;
+}
+}
