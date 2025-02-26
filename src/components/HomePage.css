@@ -214,7 +214,7 @@ html {
     border: 0.5px solid var(--bg);
     line-height: 280%;
     margin-bottom: 185px;
-    text-align: start;
+    text-align: justify;
   }
   .about-text p{
  
