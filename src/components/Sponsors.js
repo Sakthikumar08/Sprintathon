@@ -5,18 +5,23 @@ import sponsor2 from '../assets/sponsor2.png';
 import sponsor3 from '../assets/sponsor3.png';
 import sponsor4 from '../assets/sponsor4.png';
 import sponsor5 from '../assets/sponsor5.png';
+import sponsor6 from "../assets/data.png";
+import sponsor7 from "../assets/enthutech.png";
+import sponsor8 from "../assets/emblock.png";
+
 
 const sponsors = [
+  { img: sponsor6, name: "Data patterns" },
   { img: sponsor2, name: "IQmath Technologies" },
   { img: sponsor1, name: "Converse data solutions" },
-  { img: sponsor3, name: "Data patterns" },
+  
 ];
 const Industry = [
-  { img: sponsor2, name: "Enthutech" },
-  { img: sponsor1, name: "EMBLOCK" },
+  { img: sponsor7, name: "Enthutech" },
+  { img: sponsor8, name: "EMBLOCK" },
   { img: sponsor4, name: "DADB" },
   { img: sponsor5, name: "Ematix" },
-  { img: sponsor3, name: "optica" },
+  
 ];
 
 const Sponsors = () => {

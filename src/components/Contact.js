@@ -109,7 +109,7 @@ const Contact = () => {
                 </div>
                 <div className="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?..."
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5877558161965!2d80.21585227454506!3d12.869881717101268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525bbeb0b2eeb7%3A0x2cb8fc0ae9b16ed5!2sSt%20Joseph&#39;s%20College%20Of%20Engineering!5e0!3m2!1sen!2sin!4v1740463100058!5m2!1sen!2sin"
                         width="100%"
                         height="200"
                         allowFullScreen=""

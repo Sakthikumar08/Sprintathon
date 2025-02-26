@@ -5,7 +5,7 @@ html {
   scroll-behavior: smooth;
 }
   .sjcelogo img{
-    width: 600px;
+    width: 800px;
   
   }
   :root {
@@ -38,13 +38,14 @@ html {
   }
   
   .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(50%);
   }
 
   .content {
@@ -54,6 +55,13 @@ html {
     padding: 2rem;
     text-align: center;
     margin-top: 2rem;
+  /*   width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
   }
 
   .sub-text {
@@ -65,7 +73,7 @@ html {
   
   .title {
     text-transform: uppercase;
-    font-size: 10rem;
+    font-size: 14rem;
     margin-bottom: 0.5rem;
     margin-top: -2rem;
     text-shadow: 
@@ -79,12 +87,12 @@ html {
 
 /* First Letter Effect */
 .title span {
-    font-size: 19rem;
+    font-size: 14rem;
     font-weight: 800;
     display: inline-block;
-    text-shadow: 
+   /*  text-shadow: 
         0 0 25px rgba(255, 0, 128, 0.8),
-        0 0 50px rgba(0, 230, 230, 0.7);
+        0 0 50px rgba(0, 230, 230, 0.7); */
     animation: pulse 1.5s infinite alternate;
 }
 
@@ -101,11 +109,16 @@ html {
     100% { transform: scale(1.05); }
 }
 
-  
-  .subtitle {
+  .sub-tit{
     font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: -15px;
+    color: var(--neon);
+  }
+  .subtitle {
+    font-size: 4rem;
     
-    margin-top: -40px;
+    margin-top: 0px;
     margin-left: 20px;
     margin-bottom: 7rem;
     letter-spacing: 1px;
@@ -146,7 +159,7 @@ html {
   }
   
   .btn:before {
-    border-color: #ff00ff;
+    border-color:var(--neon);
     border-top-width: 2px;
     left: 0px;
     top: -5px;
@@ -154,7 +167,7 @@ html {
   
   .btn:after {
     border-bottom-width: 2px;
-    border-color: #ff00ff;
+    border-color: var(--neon);
     bottom: -5px;
     right: 0px;
   }
@@ -201,6 +214,7 @@ html {
     border: 0.5px solid var(--bg);
     line-height: 280%;
     margin-bottom: 185px;
+    text-align: start;
   }
   .about-text p{
  
@@ -215,20 +229,24 @@ html {
       width: 300px;
     }
     .title {
-      font-size: 1.8rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
       margin-top: 3rem;
   }
   .title span {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
 .subtitle {
-  font-size: 0.7rem;
-  margin-top: 0px;
+  font-size: 1.1rem;
+  margin-top: 10px;
   margin-left: 20px;
   margin-bottom: 3rem;
 
+}
+.sub-tit{
+  font-size: 1rem;
+  margin-top: 3px;
 }
 }
 /* button */

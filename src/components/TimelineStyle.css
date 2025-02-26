@@ -96,11 +96,11 @@
 .event-date {
     flex: 1;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--neon);
-    text-shadow: 0 0 10px var(--neon);
+    text-shadow: 0 0 5px var(--neon);
    /*  background: rgba(255, 255, 255, 0.1); */
-    padding: 10px 20px;
+    padding: 15px 25px;
     border-radius: 20px; 
 }
 
@@ -111,7 +111,7 @@
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     color: var(--text);
     text-align: left;

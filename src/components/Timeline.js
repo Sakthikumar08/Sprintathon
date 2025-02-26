@@ -6,8 +6,8 @@ const Timeline = () => {
     { "date": "February 26, 2025", "title": "Registrations Open", "description": "Start registering for Sprintathon'25 and form your teams." },
     { "date": "March 16, 2025", "title": "Registrations Close", "description": "Last day to register and finalize your team." },
     { "date": "March 18, 2025", "title": "Shortlisted Teams Announcement", "description": "Teams selected for the next stage will be announced." },
-    { "date": "March 20, 2025", "title": "Pre-Mentoring Session", "description": "Industry mentors guide shortlisted teams before the hackathon." },
-    { "date": "March 27, 2025", "title": "First & Second Round Evaluation", "description": "Projects will be assessed in multiple evaluation rounds." },
+    { "date": "March 20, 2025", "title": "Pre-Mentoring Session", "description": "Industry mentors will guide shortlisted teams before the hackathon." },
+    { "date": "March 27, 2025", "title": "First & Second Round Evaluation", "description": "Projects will be assessed in multiple evaluation rounds by the industries." },
     { "date": "March 28, 2025", "title": "Third Round Evaluation", "description": "Final project evaluations for hardware & software categories." },
     { "date": "March 28, 2025", "title": "Valedictory & Prize Distribution", "description": "Celebrating winners and distributing awards." }
   ];
