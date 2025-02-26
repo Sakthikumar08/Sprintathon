@@ -238,62 +238,62 @@ body {
 
 @media (max-width: 580px) {
   .cont-head {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 
 .staff-card {
   border-radius: 4px;
   padding: 10px;
-  width: 80%;
+  width: 90%;
   margin-top: 3px;
   box-shadow: 0px 0px 2px var(--accent);
 }
 .staff-img {
-  width: 140px; 
+  width: 150px; 
  
 }
 
 .staff-name {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-bottom: 8px;
 }
 .staff-card p {
   gap: 4px; 
-  font-size: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .staff-card i {
-  font-size: 0.8rem; 
+  font-size: 1.2rem; 
 }
 .staff-card a {
-  font-size: 0.7rem; 
+  font-size: 1.2rem; 
   margin-top: 3px;
 }
 
   .std-card {
     border-radius: 4px;
   padding: 10px;
-  width: 80%;
+  width: 85%;
   box-shadow: 0px 0px 2px var(--accent);
   }
   .std-img {
-    width: 140px; 
+    width: 150px; 
    
   }
   .std-name {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     margin-bottom: 8px;
   }
   .std-card p {
     gap: 4px; 
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   
   .std-card i {
-    font-size: 0.8rem; 
+    font-size: 1.2rem; 
   }
   .std-card a {
-    font-size: 0.7rem; 
+    font-size: 1.2rem; 
     margin-top: 3px;
   }
   
@@ -536,7 +536,7 @@ body {
   }
  
   .contact-info p{
-    font-size: 8px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 }

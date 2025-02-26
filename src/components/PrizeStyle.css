@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Orbitron', sans-serif;
 }
 
 :root {
@@ -20,33 +19,34 @@
 }
 
 body {
- 
+  background: var(--bg);
   color: var(--text);
+ /*  font-family: "Orbitron", sans-serif; */
   overflow-x: hidden;
 }
 
 /* Prize Container */
 .prize-container {
-  position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;
+  padding: 20px;
 }
 
 /* Title */
 .prize-title {
   font-size: 3rem;
-  text-transform: uppercase;
   text-align: center;
+  text-transform: uppercase;
   background: linear-gradient(90deg, var(--neon-blue), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px var(--neon-blue);
+  text-shadow: 0 0 15px var(--neon-blue);
   animation: neon-blink 1.5s infinite alternate;
+  margin-bottom: 30px;
 }
 
 @keyframes neon-blink {
@@ -63,67 +63,68 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
-  padding: 30px;
+  gap: 30px;
+  padding: 20px;
 }
 
 .prize-card {
-  width: 320px;
-  height: auto;
+  width: 300px;
   background: var(--glass);
   border: 2px solid var(--glass-border);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   text-align: center;
   padding: 20px;
   color: var(--text);
-  transition: transform 0.5s, box-shadow 0.5s;
-  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transform-style: preserve-3d;
 }
 
 .prize-card:hover {
-  transform: scale(1.1) rotateY(15deg);
-  box-shadow: 0 0 50px var(--accent);
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--accent);
 }
 
 /* Prize Images */
 .prize-img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   object-fit: contain;
   margin-bottom: 15px;
-  transition: transform 0.5s;
+  transition: transform 0.3s;
 }
 
 .prize-card:hover .prize-img {
   transform: scale(1.1);
 }
 
-
-.first-prize {
- font-size: 4rem;
+/* Specific Prize Styling */
+.first-prize h1 {
+  font-size: 6rem;
 }
 
-
-.second-prize {
-  font-size: 3rem;
+.first-prize h2 {
+  font-size: 4rem;
 }
 
-
-.third-prize {
-  font-size: 3rem;
+.second-prize h1,
+.third-prize h1 {
+  font-size: 5.5rem;
 }
- 
+
+.second-prize h2,
+.third-prize h2 {
+  font-size: 3.5rem;
+}
+
 /* Prize Pool */
 .prize-pool {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   font-size: 1.5rem;
   background: var(--glass);
@@ -136,17 +137,81 @@ body {
 }
 
 .prize-pool h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 10px;
   color: var(--accent);
 }
 
 .prize-pool p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 8px;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; transform: scale(0.9); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .prize-container {
+    padding: 10px;
+  }
+
+  .prize-title {
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+
+  .prize-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prize-card {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .prize-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .prize-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .first-prize h1,
+  .second-prize h1,
+  .third-prize h1 {
+    font-size: 4.5rem;
+  }
+
+  .first-prize h2,
+  .second-prize h2,
+  .third-prize h2 {
+    font-size: 2.4rem;
+  }
+  .first-prize p,
+  .second-prize p,
+  .third-prize p{
+    font-size: 2rem;
+  }
+
+
+  .prize-pool h2 {
+    font-size: 1.8rem;
+  }
+
+  .prize-pool p {
+    font-size: 1.5rem;
+  }
 }

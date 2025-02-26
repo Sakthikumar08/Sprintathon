@@ -108,6 +108,7 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  
 }
 
 .hamburger .bar {
@@ -115,6 +116,7 @@ body {
   height: 3px;
   background: white;
   transition: 0.3s ease-in-out;
+ 
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -155,5 +157,7 @@ body {
 
   .hamburger {
     display: flex;
+    margin-left: 230px;
+   
   }
 }

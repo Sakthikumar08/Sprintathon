@@ -176,7 +176,7 @@
   /* Responsive Design */
 @media (max-width: 768px) {
   .rules-title {
-      font-size: 1.2rem;
+      font-size: 2rem;
   }
   .rules-list {
       width: 98%;
@@ -206,7 +206,7 @@
 
 @media (max-width: 480px) {
   .rules-title {
-      font-size: 1.2rem;
+      font-size: 1.8rem;
   }
   .rule-card {
       font-size: 1rem;

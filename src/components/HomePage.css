@@ -19,7 +19,7 @@ html {
   }
   .sjcelogo{
     display: flex;
-    margin-top: 100px;
+    margin-top: 25px;
     padding-left: 20px;
     justify-content: center;
   }
@@ -117,11 +117,20 @@ html {
   }
   .subtitle {
     font-size: 4rem;
-    
+
     margin-top: 0px;
     margin-left: 20px;
     margin-bottom: 7rem;
     letter-spacing: 1px;
+  }
+  .subtitle-dep{
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
   }
   
 :root{
@@ -222,7 +231,7 @@ html {
   }
   @media (max-width: 568px) {
     .sjcelogo{
-      margin-top: 70px;
+      margin-top: 30px;
       padding-right: 20px;
     } 
     .sjcelogo img{
@@ -231,7 +240,7 @@ html {
     .title {
       font-size: 3rem;
       margin-bottom: 0.5rem;
-      margin-top: 3rem;
+      margin-top: 1rem;
   }
   .title span {
     font-size: 3rem;
@@ -248,6 +257,17 @@ html {
   font-size: 1rem;
   margin-top: 3px;
 }
+.subtitle-dep{
+  font-size: 0.8rem;
+  margin-top: 0px;
+  margin-left: 20px;
+  margin-bottom: 0rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  
+}
+
+
 }
 /* button */
 @media (max-width: 780px){

@@ -16,7 +16,7 @@ function Home() {
         <div className='sjcelogo'>
           <img src={sjcelogo} alt="SJCELogo" />
         </div>
-
+        <h2 className='subtitle-dep'>Department of Electronics and Communication Engineering</h2>
         <h1 className="title"><span>S</span>printathon'25</h1>
         <p className='sub-tit'>A Sprint to Revolution</p>
         <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION SPRINT</p>
