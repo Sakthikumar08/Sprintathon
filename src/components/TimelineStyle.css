@@ -207,7 +207,7 @@
 
     .event-details p {
         font-size: 1rem;
-        font-family: "Lith",monospace;
+        
     }
 
     .timeline-event.left .event-details::after,

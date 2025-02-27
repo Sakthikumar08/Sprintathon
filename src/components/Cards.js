@@ -10,20 +10,20 @@ import droneImage from "../assets/icons8-drone-64.png";
 
 const cardData = [
   {
-    name: "Clean and Renewable Energy",
+    name: "Renewable Energy",
     icon: "fa-leaf",
    
   },
-  { name: "Health", icon: "fa-heartbeat" },
+  { name: "Health Monitoring", icon: "fa-heartbeat" },
   { name: "Waste Management", icon: "fa-recycle" },
-  { name: "Agriculture", icon: "fa-tractor" },
+  { name: "Smart Farming", icon: "fa-tractor" },
   { name: "Smart Education", icon: "fa-graduation-cap" },
   { name: "Cybersecurity", icon: "fa-lock" },
   { name: "AR & VR", icon: "fa-glasses" },
-  { name: "Space Tech & Sat Comm", icon: "fa-satellite" },
-  { name: "Ocean Technology", icon: "fa-ship" },
+  { name: "Satellite Communication", icon: "fa-satellite" },
+ 
   { name: "Drone Technology", image: droneImage },
-  { name: "VLSI", icon: "fa-microchip" },
+  { name: "Edge computing", icon: "fa-server" },
   { name: "Student Innovation", icon: "fa-lightbulb" },
 ];
 
@@ -101,7 +101,7 @@ const Popup = ({ card, onClose }) => {
         {card.additionalInfo && <p>{card.additionalInfo}</p>}
         {card.sdg && <p><strong>{card.sdg}</strong></p>}
         {card.category && <p><strong>{card.category}</strong></p>}
-        <button className="close-btn" onClick={onClose}>Close</button>
+        <button className="close-btn" onClick={onClose}></button>
       </div>
     </div>
   );
