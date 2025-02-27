@@ -23,7 +23,7 @@ const cardData = [
   { name: "Satellite Communication", icon: "fa-satellite" },
  
   { name: "Drone Technology", image: droneImage },
-  { name: "Edge computing", icon: "fa-server" },
+  { name: "Edge computing", icon: "fa-network-wired" },
   { name: "Student Innovation", icon: "fa-lightbulb" },
 ];
 
