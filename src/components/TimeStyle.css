@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: Arial, sans-serif;
+  }
+  
+  .timer-container {
+    text-align: center;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .timer-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e; /* Darker box background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 120px; /* Fixed width for all cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .timer-box:hover {
+    transform: translateY(-10px); /* Hover effect: move card up */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Hover effect: increase shadow */
+  }
+  
+  .timer-box span {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .timer-box .label {
+    font-size: 1rem;
+    color: #bbbbbb; /* Light gray for labels */
+    margin-top: 5px;
+  }
+  

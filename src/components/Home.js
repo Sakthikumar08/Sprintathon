@@ -1,7 +1,8 @@
 import React from 'react';
 import "./HomePage.css";
 import sjcelogo from "../assets/sjcelogo1.png";
-import Timeline from "./Timeline"
+import Timeline from "./Timeline";
+import Timer from "./Timer";
 
 function Home() {
   return (
@@ -18,9 +19,9 @@ function Home() {
         </div>
         <h2 className='subtitle-dep'>Department of Electronics and Communication Engineering</h2>
         <h1 className="title"><span>S</span>printathon'25</h1>
-        <p className='sub-tit'>A Sprint to Revolution</p>
+        
         <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION SPRINT</p>
-
+         
         <a href="https://forms.gle/bF1p6XJcMhRRZ9F46" ><button className="btn">REGISTER NOW</button></a>
       </div>
       <Timeline />
