@@ -21,8 +21,9 @@ function Home() {
         <h1 className="title"><span>S</span>printathon'25</h1>
         
         <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION SPRINT</p>
-         
+     
         <a href="https://forms.gle/bF1p6XJcMhRRZ9F46" ><button className="btn">REGISTER NOW</button></a>
+        <Timer />
       </div>
       <Timeline />
       <div>

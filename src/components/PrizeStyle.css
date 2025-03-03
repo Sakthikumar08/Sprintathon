@@ -91,8 +91,8 @@ body {
 
 /* Prize Images */
 .prize-img {
-  width: 180px;
-  height: 180px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: contain;
   margin-bottom: 15px;
@@ -104,24 +104,32 @@ body {
 }
 
 /* Specific Prize Styling */
-.first-prize h1 {
-  font-size: 6rem;
+.first-prize .prize-img {
+  width: 100px;
+  height: 100px;
+}
+.first-prize p {
+  font-size: 3rem;
 }
 
 .first-prize h2 {
   font-size: 4rem;
 }
 
-.second-prize h1,
-.third-prize h1 {
-  font-size: 5.5rem;
+.second-prize .prize-img,
+.third-prize .prize-img {
+  width: 80px;
+  height: 80px;
 }
 
 .second-prize h2,
 .third-prize h2 {
   font-size: 3.5rem;
 }
-
+.second-prize p,
+.third-prize p {
+  font-size: 3rem;
+}
 /* Prize Pool */
 .prize-pool {
   margin-top: 40px;
@@ -143,7 +151,7 @@ body {
 }
 
 .prize-pool p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 8px;
 }
 

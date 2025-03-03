@@ -10,7 +10,7 @@ const Timer = () => {
   });
 
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2025-03-16T23:59:59"); // Registration closing date
+    const targetDate = new Date("2025-04-08T07:59:59"); // Registration closing date
     const now = new Date();
     const difference = targetDate - now;
 

@@ -20,7 +20,7 @@ function App() {
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/ourteam" element={<Ourteam />} /> */}
+        <Route path="/ourteam" element={<Ourteam />} />
       </Routes>
     </Router>
   );

@@ -24,21 +24,22 @@
 }/* Profile Container */
 .profile-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(5, 1fr); 
   gap: 30px;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 50px 130px;
   perspective: 1000px;
+  margin-top: 8rem;
 }
 
 /* Profile Card */
 .profile-card {
   position: relative;
-  background: linear-gradient(135deg, rgba(44, 154, 227, 0.3), rgba(0, 0, 0, 0.8));
+  background: linear-gradient(135deg, rgba(126, 44, 227, 0.3), rgba(0, 0, 0, 0.8));
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
-  padding: 15px;
+  padding: 12px;
   text-align: center;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-style: preserve-3d;
@@ -48,7 +49,7 @@
 /* 3D Hover Effect */
 .profile-card:hover {
   transform: rotateY(10deg) translateY(-5px);
-  box-shadow: 0 10px 25px rgba(115, 0, 255, 0.6);
+  box-shadow: 0 10px 25px rgba(162, 0, 255, 0.6);
 }
 
 /* Glowing Border */
@@ -102,15 +103,15 @@
   .profile-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
-    gap: 25px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px;
+    padding: 10px 20px;
     perspective: 1000px;
   }
   .profile-card {
     position: relative;
-    background: linear-gradient(135deg, rgba(44, 154, 227, 0.3), rgba(0, 0, 0, 0.8));
+    background: linear-gradient(135deg, rgba(126, 44, 227, 0.3), rgba(0, 0, 0, 0.8));
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
     padding: 8px;

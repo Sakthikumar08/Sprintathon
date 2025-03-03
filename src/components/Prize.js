@@ -1,8 +1,8 @@
 import React from "react";
 import "./PrizeStyle.css";
-import firstpr from "../assets/firstpr.png";
-import secondpr from "../assets/secondpr.png";
-import thirdpr from "../assets/thirdpr.png";
+import firstpr from "../assets/1prize.png";
+import secondpr from "../assets/2prize.png";
+import thirdpr from "../assets/3prize.png";
 
 const Prize = () => {
   return (
@@ -21,29 +21,33 @@ const Prize = () => {
         <div className="prize-cards">
           {/* 2nd Prize */}
           <div className="prize-card second-prize">
-             <h1>🥈</h1>
+            <img src={secondpr} alt="" className="prize-img" />
+            
             <h2>1st Runner-up</h2>
-            <p>Prize: ₹25,000</p>
+            <p>Prize: ₹50,000</p>
           </div>
 
           {/* 1st Prize */}
           <div className="prize-card first-prize">
-             <h1>🥇</h1>
+          <img src={firstpr} alt="" className="prize-img"/>
+           
             <h2>Winner</h2>
-            <p>Prize: ₹50,000</p>
+            <p>Prize: ₹1,00,000</p>
           </div>
 
           {/* 3rd Prize */}
           <div className="prize-card third-prize">
-            <h1>🥉</h1>
+          <img src={thirdpr} alt="" className="prize-img"/>
+            
             <h2>2nd Runner-up</h2>
-            <p>Prize: ₹15,000</p>
+            <p>Prize: ₹25,000</p>
           </div>
         </div>
+       
 
         {/* Prize Pool Section */}
         <div className="prize-pool">
-          <h2>Prize Pool of ₹75,000 </h2>
+          <h2>Prize Pool of ₹1,75,000 </h2>
           <p>
             🎓 Exciting Internship Offers with a Total Stipend of ₹2,24,000 💼 <br />
             🎟 Course Certification Vouchers Worth <strong>$20,000</strong> for All Participants!
