@@ -38,3 +38,12 @@
     color: #bbbbbb; /* Light gray for labels */
     margin-top: 5px;
   }
+  @media (max-width: 568px){
+    .timer {
+    
+      gap: 10px;
+    }
+    .timer-box{
+      width: 60px;
+    }
+  }
