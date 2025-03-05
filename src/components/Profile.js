@@ -8,18 +8,21 @@ import ajitha from "../assets/ajitha.png";
 import Pk from "../assets/prabuk.png"
 import shriram from "../assets/shriram.png"
 import venky from "../assets/venky.png";
-import franesh from "../assets/franesh.png"
+import franesh from "../assets/franesh.png";
+import thava from "../assets/thavam.png"
 
 const coordinators = [
   { name: "Sakthi Kumar", image: sakthi },
   { name: "Lithin ", image: Lithin },
   { name: "Pranav", image: pranav },
   { name: "PK ", image: Pk },
+  { name: "Thavaprakash", image: thava },
   { name: "Venky ", image: venky },
   { name: "Lakshmi ", image: lakshmi },
   { name: "Ajitha", image: ajitha },
   { name: "Shriram", image: shriram },
   { name: "Franesh", image: franesh },
+ 
 ];
 
 const Profile = () => {

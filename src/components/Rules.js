@@ -14,17 +14,14 @@ const Rules = () => {
 
       <div className="rules-list">
         {[
-  "A team should contain a maximum of 4 and a minimum of 3 members, with at least one female participant.",
-  "Participants will be connected with top industry mentors for a pre-mentoring session. Attendance in the online sessions as per the assigned schedule is mandatory.",
-  "Participants must supply all hardware, software, and other components required for their projects. The organizers will not provide any project-related materials.",
-  "All participants are required to inform their parents/guardians about the 24-hour duration of the hackathon.",
-  "Participants are responsible for arranging their own transportation to and from the hackathon venue.",
-  "The college management and event organizers shall not be held liable for any actions, incidents, or damages that occur outside the boundaries of the official hackathon venue (campus premises). Participants are solely responsible for their conduct and safety when off-campus, including during travel to and from the event.",
-  "As this is a 24-hour hackathon, participants are required to remain within the designated venue at all times, except during scheduled breaks or in the event of an emergency.",
-  "Food and refreshments will be provided by our college for all hackathon teams. Refreshments will include coffee, tea, and snacks. Water will be available throughout the event.",
-  "Students are requested to dress in professional attire for the hackathon.",
-  "Participants are required to follow the instructions and guidance provided by the event organizers and staff members to ensure a smooth and successful hackathon."
-]
+          "Team Size: All participants must be from the same college. The maximum team size is 4, and the minimum team size is 3. Also, the team must contain at least 1 girl.",
+          "Pre-Mentoring Session: Participants will be connected with top industry mentors for a pre-mentoring session. Attendance in the online sessions as per the assigned schedule is mandatory.",
+          "Components and Tools: Participants must bring their own components and tools required for their project. The organizers will not provide any materials.",
+          "Dress Code: Students are requested to dress in professional attire for the hackathon.",
+          "Food and Accommodation: Food, snacks, and accommodation will be provided free of cost for the shortlisted participants.",
+          "Event Guidelines: Participants are required to follow all instructions and guidance provided by the event organizers and staff members to ensure a smooth and successful hackathon.",
+          "Transportation for Outstation Participants: Participants from outside Chennai are responsible for arranging their own transportation, accommodation, and any additional requirements."
+        ]
 .map((rule, index) => (
           <div key={index} className="rule-card-wrapper">
             {/* Four-Corner Borders Outside */}

@@ -20,7 +20,7 @@ function Home() {
         <h2 className='subtitle-dep'>Department of Electronics and Communication Engineering</h2>
         <h1 className="title"><span>S</span>printathon'25</h1>
         
-        <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION SPRINT</p>
+        <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION HACKATHON</p>
      
         <a href="https://forms.gle/bF1p6XJcMhRRZ9F46" ><button className="btn">REGISTER NOW</button></a>
         <Timer />
