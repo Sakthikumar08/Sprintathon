@@ -3,6 +3,7 @@ import "./CardsStyle.css";
 import droneImage from "../assets/icons8-drone-64.png";
 
 const cardData = [
+  { name: "Defence Technology", icon: "fa-shield-halved", points: ["Eco-friendly power", "Sustainable development"] },
   { name: "Renewable Energy", icon: "fa-leaf", points: ["Eco-friendly power", "Sustainable development"] },
   { name: "Health Monitoring", icon: "fa-heartbeat", points: ["Real-time tracking", "Personalized healthcare"] },
   { name: "Waste Management", icon: "fa-recycle", points: ["Smart disposal", "Recycling solutions"] },

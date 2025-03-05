@@ -1,8 +1,6 @@
 /* Importing Custom Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
-
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +20,7 @@
 /* Card Grid Layout */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Four columns per row */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 50px;
   padding: 20px;
   justify-items: center;

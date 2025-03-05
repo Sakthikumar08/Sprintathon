@@ -12,13 +12,15 @@ import sponsor8 from "../assets/emblock.png";
 
 const sponsors = [
   { img: sponsor6, name: "Data patterns" },
-  { img: sponsor2, name: "IQmath Technologies" },
-  { img: sponsor1, name: "Converse data solutions" },
+/*   { img: sponsor2, name: "IQmath Technologies" },
+  { img: sponsor1, name: "Converse data solutions" }, */
   
 ];
 const Industry = [
+  { img: sponsor2, name: "IQmath Technologies" },
+  { img: sponsor1, name: "Converse data solutions" },
   { img: sponsor7, name: "Enthutech" },
-  { img: sponsor8, name: "EMBLOCK" },
+ /*  { img: sponsor8, name: "EMBLOCK" }, */
   { img: sponsor4, name: "DADB" },
   { img: sponsor5, name: "Ematix" },
   
