@@ -21,13 +21,13 @@
 }
 
 .timeline-title {
-    font-size: 6rem; 
+    font-size: 5rem; 
     background: linear-gradient(90deg, #ff00ff, #00ffff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: var(--shadow-glow);
-    margin-bottom: 3rem;
-    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
     animation: neon-blink 1.5s infinite alternate;
 }
 @keyframes neon-blink {
@@ -107,7 +107,7 @@
 /* Event Details */
 .event-details {
     flex: 2;
-    padding: 15px;
+    padding: 10px;
     background: var(--glass);
     border: 1px solid var(--glass-border);
     border-radius: 10px;
@@ -133,7 +133,9 @@
 
 .timeline-event.left .event-details::after {
     left: 100%;
+    
 }
+
 
 .timeline-event.right .event-details::after {
     right: 100%;
@@ -148,7 +150,7 @@
 .event-details h3 {
     margin: 0;
     color: var(--neon);
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-shadow: 0 0 10px var(--neon);
     
 }
@@ -156,7 +158,7 @@
 .event-details p {
     margin-top: 5px;
     color: #ddd;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 /* Glow Animation */

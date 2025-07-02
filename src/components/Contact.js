@@ -11,10 +11,10 @@ import "./ContactStyle.css";
 
 const staffMembers = [
   {
-    name: "Dr.Niruban R",
-    mobile: "+91 98765 43210",
-    email: "nirubanr@stjosephs.ac.in",
-    image: niruban 
+    name: "Dr.D.Lakshmi",
+    mobile: "+91 98416 69119",
+    email: "@stjosephs.ac.in",
+    image:Lakshmi
   },
   {
     name: "Mr.M.Lingeshwaran",
@@ -23,12 +23,13 @@ const staffMembers = [
     image: lingesh
   },
   {
-    name: "Dr.D.Lakshmi",
-    mobile: "+91 98416 69119",
-    email: "@stjosephs.ac.in",
-    image:Lakshmi
+    name: "Dr.Niruban R",
+    mobile: "+91 98765 43210",
+    email: "nirubanr@stjosephs.ac.in",
+    image: niruban 
   },
-
+  
+  
   
   
 ];
