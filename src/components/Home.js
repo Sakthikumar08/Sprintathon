@@ -4,6 +4,8 @@ import sjcelogo from "../assets/sjcelogo1.png";
 import title from "../assets/SprtLogo.png";
 import Timeline from "./Timeline";
 import Timer from "./Timer";
+import clglogo1 from "../assets/clglogo1.png";
+import clglogo2 from "../assets/clglogo2.png";
 
 function Home() {
   return (
