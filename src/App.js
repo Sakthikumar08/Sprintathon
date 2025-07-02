@@ -27,13 +27,14 @@ function App() {
           <Prize />
         </section>
         
-        <section id="sponsors" style={{height:"160vh"}}>
+        <section id="sponsors" className="h-[160vh] max-[668px]:h-[115vh]" >
           <Sponsors />
         </section>
         
-        <section id="rules" style={{height:"175vh"}} >
-          <Rules />
+        <section id="rules" className="h-[110vh] max-[668px]:h-[90vh]">
+        <Rules />
         </section>
+
         
         <section id="contact" style={{height:"200vh"}}>
           <Contact />

@@ -24,7 +24,7 @@ const Timeline = () => {
     },
     {
       date: "AUG 6, 2025",
-      title: "HACKATHON BEGINS AT SH. JOSEPH'S CAMPUS",
+      title: "HACKATHON BEGINS AT St.JOSEPH'S CAMPUS",
       position: "left",
     },
     {
@@ -51,43 +51,50 @@ const Timeline = () => {
   return (
     <div className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-white mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12">
           HACKATHON TIMELINE
         </h2>
         
-        {/* Timeline line */}
-        <div className="absolute left-1/2 w-1 h-[820px] bg-purple-500 transform -translate-x-1/2"></div>
+        {/* Timeline line - position changes on mobile */}
+        <div className="absolute left-4 sm:left-1/2 w-1 h-[535px] sm:h-[820px] bg-purple-500 sm:transform sm:-translate-x-1/2"></div>
         
         {/* Timeline items */}
-        <div className="relative space-y-8">
+        <div className="relative space-y-8 pl-8 sm:pl-0">
           {events.map((event, index) => (
             <div
               key={index}
               className={`flex ${
-                event.position === "left" ? "justify-start" : 
-                event.position === "right" ? "justify-end" : "justify-center"
+                event.position === "left" 
+                  ? "justify-start sm:justify-start" 
+                  : event.position === "right" 
+                    ? "justify-start sm:justify-end" 
+                    : "justify-center"
               }`}
             >
               <div
-                className={`w-5/12 p-6 rounded-lg ${
+                className={`w-full sm:w-5/12 p-4 sm:p-6 rounded-lg ${
                   event.position === "center" 
-                    ? "bg-purple-600 text-center w-full max-w-md mx-auto" 
+                    ? "bg-purple-600 text-center w-full sm:max-w-md mx-auto" 
                     : "bg-gray-800 border border-purple-400"
                 } relative`}
               >
-                {/* Dot on timeline */}
+                {/* Dot on timeline - position changes on mobile */}
                 {event.position !== "center" && (
                   <div
-                    className={`absolute top-1/2 w-4 h-4 rounded-full bg-purple-500 transform -translate-y-1/2 ${
-                      event.position === "left" ? "-right-6" : "-left-6"
+                    className={`absolute top-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-purple-500 transform -translate-y-1/2 ${
+                      event.position === "left" 
+                        ? "-left-8 sm:-right-6 sm:left-auto" 
+                        : "-left-8 sm:-left-6"
                     }`}
                   ></div>
                 )}
                 
                 {event.date && (
-                  <p className="text-purple-300 font-semibold mb-2">{event.date}</p>
+                  <p className="text-sm sm:text-base text-purple-300 font-semibold mb-1 sm:mb-2">
+                    {event.date}
+                  </p>
                 )}
-                <h3 className={`text-xl font-bold ${
+                <h3 className={`text-sm sm:text-xl font-bold ${
                   event.position === "center" ? "text-white" : "text-white"
                 }`}>
                   {event.title}

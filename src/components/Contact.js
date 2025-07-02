@@ -1,5 +1,5 @@
 import React from 'react';
-import Profileimg from '../assets/profile.png';
+
 import Pranav from "../assets/pranav.png";
 import  ajitha from "../assets/ajitha.png";
 import lakshmi from "../assets/lakshmin.png";

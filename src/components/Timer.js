@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./TimeStyle.css"; // Import the correct CSS file
+import "./TimeStyle.css";
 
 const Timer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -10,7 +10,7 @@ const Timer = () => {
   });
 
   const calculateTimeLeft = () => {
-    const targetDate = new Date("2025-04-08T07:59:59"); // Registration closing date
+    const targetDate = new Date("2025-08-06T07:59:59"); // Updated to August 6, 2025
     const now = new Date();
     const difference = targetDate - now;
 

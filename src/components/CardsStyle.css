@@ -1,4 +1,3 @@
-/* Importing Custom Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
 
 * {
@@ -20,17 +19,35 @@
 /* Card Grid Layout */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr); /* Exactly 4 columns */
   gap: 50px;
   padding: 20px;
   justify-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
 }
+
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+     /* 3 columns for tablets */
+     gap:30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+     /* 2 columns for smaller tablets */
+     gap:30px;
+     padding: 5px;
+  }
+}
+
 
 .tilt-card {
   width: 100%;
-  max-width: 250px;
-  height: 150px;
+  max-width: 200px;
+  height: 120px;
   background: linear-gradient(135deg, rgba(43, 36, 93, 0.5), rgba(45, 18, 60, 0.5));
   border-radius: 4px;
   display: flex;
@@ -39,12 +56,12 @@
   position: relative;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .tilt-card:hover {
   transform: scale(1.05);
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
 }
 
 /* Corner Borders */
@@ -54,272 +71,180 @@
 .tilt-card .bottom-right {
   content: "";
   position: absolute;
-  width: 18px; /* Adjust thickness */
-  height: 18px; /* Adjust thickness */
-  border-color: var(--neon); /* Change color if needed */
+  width: 15px;
+  height: 15px;
+  border-color: var(--neon);
   border-style: solid;
 }
 
-/* Top Left */
 .tilt-card::before {
   top: -5px;
   left: -5px;
-  border-width: 3px 0 0 3px;
+  border-width: 2px 0 0 2px;
 }
 
-/* Top Right */
 .tilt-card::after {
   top: -5px;
   right: -5px;
-  border-width: 3px 3px 0 0;
+  border-width: 2px 2px 0 0;
 }
 
-/* Bottom Left */
 .tilt-card .bottom-left {
   bottom: -5px;
   left: -5px;
-  border-width: 0 0 3px 3px;
+  border-width: 0 0 2px 2px;
 }
 
-/* Bottom Right */
 .tilt-card .bottom-right {
   bottom: -5px;
   right: -5px;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
 }
-
-
 
 /* Inner Content Styling */
 .tilt-card-inner {
   text-align: center;
   color: #fff;
- 
+  padding: 15px;
 }
 
 .tilt-card-inner i {
-  font-size: 40px;
-  margin-bottom: 10px;
-  
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: var(--neon);
 }
 
 .hover-text {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--text);
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
-
-
-
-
-.drone-image {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-
-
-
-
-@media (max-width: 668px) {
-  .cards-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on tablets */
-  }
-  .tilt-card {
-    width: 100%;
-    max-width: 120px;
-    height: 120px;
-    background: linear-gradient(135deg, rgba(43, 36, 93, 0.5), rgba(45, 18, 60, 0.5));
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  .hover-text {
-    font-size: 10px;
-    color: var(--accent);
-    font-family: "Lith",monospace;
-  }
-  
-}
-
-
-
-/* Blur effect when popup is active */
-.blur-bg {
-  filter: blur(8px);
-  pointer-events: none; /* Prevent interaction with blurred content */
-}
-
-/* Modal Styles */
-.modal-overlay {
+/* Popup Styles */
+.popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-  backdrop-filter: blur(8px); /* Blurs background */
-}
-
-.modal {
-  width: 500px;
-  height: 600px;
-  background: rgba(43, 36, 93, 0.95);
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
   z-index: 1000;
-  position: relative;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Modal Header */
-.modal-header {
+.popup-content {
+  background: rgba(43, 36, 93, 0.95);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--neon);
+}
+
+.popup-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 20px;
-  font-weight: bold;
+  margin-bottom: 15px;
 }
 
-/* Modal Content */
-.modal-content {
-  margin-top: 10px;
-  font-size: 14px;
-  line-height: 1.5;
+.popup-header h2 {
+  font-size: 22px;
+  color: var(--neon);
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Close Button */
 .close-btn {
   background: none;
   border: none;
   color: var(--neon);
   font-size: 24px;
   cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 15px;
 }
 
-/* Responsive Modal */
-@media (max-width: 480px) {
-  .modal {
-    width: 90%;
-    height: 80%;
-  }
-}
-/* popup */
-
-/* Popup Overlay (Blurry Background) */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3); /* Slight dark overlay */
-  backdrop-filter: blur(8px); /* Background blur effect */
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.popup-body ul {
+  list-style-type: none;
+  text-align: left;
 }
 
-/* Popup Box (Blurry Popup) */
-.popup-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  max-width: 90%;
-  background: rgba(255, 255, 255, 0.2); /* Transparent white */
-  backdrop-filter: blur(10px); /* Blur effect for the popup itself */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-
-  padding: 20px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-/* Popup Header */
-.popup-header {
-  font-size: 2.2rem;
-  font-weight: bold;
+.popup-body li {
   margin-bottom: 10px;
-  color: white; /* Ensuring readability */
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
 }
 
-/* Popup Content */
-.popup-content {
-  font-size: 1rem;
-  color: white; /* Text color */
-  margin-bottom: 15px;
-  border: 1px solid var(--accent);
-  padding: 50px;
-  border-radius: 4px;
-  background: rgba(60, 32, 69, 0.5); /* Transparent white */
-  backdrop-filter: blur(10px); /* Blur effect for the popup itself */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  font-size: 2rem;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+ 
 
-
-/* Buttons */
-.popup-buttons {
-  display: flex;
-  gap: 10px;
-}
-
-.popup-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.popup-button.primary {
-  background: #007bff;
-  color: white;
-}
-
-.popup-button.secondary {
-  background: #e0e0e0;
-  color: black;
-}
-
-.popup-button:hover {
-  transform: scale(1.05);
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translate(-50%, -55%);
+  .tilt-card {
+    height: 100px;
+    max-width: 150px;
   }
-  to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
+
+  .tilt-card-inner i {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .hover-text {
+    font-size: 12px;
+  }
+
+  .popup-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .popup-header h2 {
+    font-size: 18px;
+  }
+
+  .popup-body li {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .tilt-card {
+    height: 90px;
+    max-width: 140px;
+  }
+
+  .tilt-card-inner i {
+    font-size: 20px;
+  }
+
+  .hover-text {
+    font-size: 10px;
+  }
+
+  .popup-header h2 {
+    font-size: 16px;
+  }
+
+  .popup-body li {
+    font-size: 11px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
   }
 }

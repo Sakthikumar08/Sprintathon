@@ -8,6 +8,7 @@ import sponsor5 from '../assets/sponsor5.png';
 import sponsor6 from "../assets/data.png";
 import sponsor7 from "../assets/enthutech.png";
 import sponsor8 from "../assets/emblock.png";
+import Logoscroll from './Logoscroll';
 
 
 const sponsors = [
@@ -65,6 +66,9 @@ const Sponsors = () => {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Logoscroll/>
       </div>
     </div>
     </div>
