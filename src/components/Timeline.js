@@ -1,46 +1,101 @@
-import React, { useEffect } from "react";
-import "./TimelineStyle.css";
+import React from "react";
 
 const Timeline = () => {
-  const timelineEvents =[
-    { "date": "July 05, 2025", "title": "Registrations Open", "description": "Start registering for Sprintathon'25 and form your teams." },
-    { "date": "July 20, 2025", "title": "Registrations Close", "description": "Last day to register and finalize your team." },
-    { "date": "July 24, 2025", "title": "Shortlisted Teams Announcement", "description": "Teams selected for the next stage will be announced." },
-    { "date": "July 30, 2025", "title": "Pre-Mentoring Session", "description": "Industry mentors will guide shortlisted teams before the hackathon." },
-    { "date": "August 06, 2025", "title": "First & Second Round Evaluation", "description": "Projects will be assessed in multiple evaluation rounds by the industries." },
-    { "date": "August 07, 2025", "title": "Third Round Evaluation", "description": "Final project evaluations for hardware & software categories." },
-    { "date": "August 07, 2025", "title": "Valedictory & Prize Distribution", "description": "Celebrating winners and distributing awards." }
+  const events = [
+    {
+      date: "JULY 2, 2025",
+      title: "REGISTRATION STARTS",
+      position: "left",
+    },
+    {
+      date: "JULY 20, 2025",
+      title: "REGISTRATION ENDS",
+      position: "right",
+    },
+    {
+      date: "JULY 24, 2025",
+      title: "ANNOUNCEMENT OF SHORTLISTED TEAMS",
+      position: "left",
+    },
+    {
+      date: "JULY 27, 2025",
+      title: "PRE MENTORING SESSION FOR SHORTLISTED TEAMS",
+      position: "right",
+    },
+    {
+      date: "AUG 6, 2025",
+      title: "HACKATHON BEGINS AT SH. JOSEPH'S CAMPUS",
+      position: "left",
+    },
+    {
+      date: "AUG 6, 2025",
+      title: "FIRST AND SECOND ROUND OF EVALUATION",
+      position: "right",
+    },
+    {
+      date: "AUG 7, 2025",
+      title: "THIRD ROUND OF EVALUATION",
+      position: "left",
+    },
+    {
+      date: "AUG 7, 2025",
+      title: "VALEDICTORY AND PRIZE DISTRIBUTION",
+      position: "right",
+    },
+    {
+      title: "THE END OF HACKATHON",
+      position: "center",
+    },
   ];
-  
-
-  useEffect(() => {
-    const handleScroll = () => {
-      document.querySelectorAll(".timeline-event").forEach((el) => {
-        const position = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (position < windowHeight - 100) {
-          el.classList.add("active");
-        }
-      });
-    };
-    
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
-    <div className="timeline-container">
-      <h1 className="timeline-title">Timeline</h1>
-      <div className="timeline">
-        {timelineEvents.map((event, index) => (
-          <div key={index} className={`timeline-event ${index % 2 === 0 ? "left" : "right"}`}>
-            <div className="event-date">{event.date}</div>
-            <div className="event-details">
-              <h3>{event.title}</h3>
-              <p>{event.description}</p>
+    <div className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center text-white mb-12">
+          HACKATHON TIMELINE
+        </h2>
+        
+        {/* Timeline line */}
+        <div className="absolute left-1/2 w-1 h-[820px] bg-purple-500 transform -translate-x-1/2"></div>
+        
+        {/* Timeline items */}
+        <div className="relative space-y-8">
+          {events.map((event, index) => (
+            <div
+              key={index}
+              className={`flex ${
+                event.position === "left" ? "justify-start" : 
+                event.position === "right" ? "justify-end" : "justify-center"
+              }`}
+            >
+              <div
+                className={`w-5/12 p-6 rounded-lg ${
+                  event.position === "center" 
+                    ? "bg-purple-600 text-center w-full max-w-md mx-auto" 
+                    : "bg-gray-800 border border-purple-400"
+                } relative`}
+              >
+                {/* Dot on timeline */}
+                {event.position !== "center" && (
+                  <div
+                    className={`absolute top-1/2 w-4 h-4 rounded-full bg-purple-500 transform -translate-y-1/2 ${
+                      event.position === "left" ? "-right-6" : "-left-6"
+                    }`}
+                  ></div>
+                )}
+                
+                {event.date && (
+                  <p className="text-purple-300 font-semibold mb-2">{event.date}</p>
+                )}
+                <h3 className={`text-xl font-bold ${
+                  event.position === "center" ? "text-white" : "text-white"
+                }`}>
+                  {event.title}
+                </h3>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

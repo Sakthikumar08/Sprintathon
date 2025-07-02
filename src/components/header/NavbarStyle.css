@@ -172,3 +172,11 @@ body {
    
   }
 }
+/* Add this at the end of your existing CSS */
+.active-nav-item {
+  color: var(--bgclr) !important;
+}
+
+.active-nav-item::before {
+  width: 100% !important;
+}

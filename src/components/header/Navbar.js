@@ -1,49 +1,52 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./NavbarStyle.css";
-import logo from "../../assets/SprtLogo.png"; 
+import { Link } from "react-scroll";
+import logo from "../../assets/SprtLogo.png";
+import "./NavbarStyle.css"; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const navItems = [
+    { id: "home", name: "Home" },
+    { id: "domain", name: "Domain" },
+    { id: "prize", name: "Prize" },
+    { id: "sponsors", name: "Sponsors" },
+    { id: "contact", name: "Contact" },
+    { id: "rules", name: "Rules" },
+  ];
+
   return (
     <header className="navbar">
-     
+      {/* Brand/Logo */}
       <div className="brand">
-       
-          <img src={logo} alt="Logo" className="logo" />
-       
+        <img src={logo} alt="Logo" className="logo" />
       </div>
 
       {/* Navigation Links */}
       <nav className={`nav-list ${menuOpen ? "active" : ""}`}>
         <ul>
-          <li>
-            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-          </li>
-          <li>
-            <Link to="/domain" onClick={() => setMenuOpen(false)}>Domain</Link>
-          </li>
-          <li>
-            <Link to="/prize" onClick={() => setMenuOpen(false)}>Prize</Link>
-          </li>
-          <li>
-            <Link to="/sponsors" onClick={() => setMenuOpen(false)}>Sponsors</Link>
-          </li>
-          <li>
-            <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-          </li>
-          <li>
-            <Link to="/rules" onClick={() => setMenuOpen(false)}>Rules</Link>
-          </li>
-          {/* <li>
-            <Link to="/ourteam" onClick={() => setMenuOpen(false)}>Our Team</Link>
-          </li> */}
+          {navItems.map((item) => (
+            <li key={item.id}>
+              <Link
+                to={item.id}
+                smooth={true}
+                duration={500}
+                offset={-100}
+                className="nav-link" 
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
 
       {/* Hamburger Menu for Mobile */}
-      <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
+      <div 
+        className={`hamburger ${menuOpen ? "active" : ""}`} 
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

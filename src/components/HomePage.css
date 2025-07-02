@@ -211,7 +211,7 @@ html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: var(--shadow-glow);
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   margin-top: 2rem;
   animation: neon-blink 1.5s infinite alternate;
@@ -227,12 +227,12 @@ html {
   .about-text{
     background: rgba(58, 5, 70, 0.4);
     margin: 80px auto;
-    padding: 45px;
+    padding: 30px;
     width:900px;
     border-radius: 7px;
     border: 0.5px solid var(--bg);
     line-height: 280%;
-    margin-bottom: 185px;
+    margin-bottom: 50px;
     text-align: justify;
   }
   .about-text p{

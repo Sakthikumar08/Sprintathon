@@ -30,27 +30,18 @@
 
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 110vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
  }
- .background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  filter: brightness(50%);
-}
+ 
 .domain-container{
   width: 100%;
   height: 100vh;
-  overflow-y: auto;
-  padding: 50px 0;
+
+  padding: 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

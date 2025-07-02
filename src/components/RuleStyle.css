@@ -22,26 +22,18 @@
   }
   
   
-  /* Video Background */
-.background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
+
+
 
 /* Rules Container */
 .rules-container {
-  min-height: 100vh;
+  height: 120vh;
   color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 5rem 2rem;
-  overflow: hidden;
+  
   text-align: center;
 }
 

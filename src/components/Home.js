@@ -7,6 +7,7 @@ import Timer from "./Timer";
 
 function Home() {
   return (
+    <section id="home">
     <div className="home">
       {/* Video Background */}
       <video autoPlay loop muted className="bg-video">
@@ -40,6 +41,7 @@ Are you ready to push boundaries and create the future? Join us at SPRINTATHON 2
         </div>
       </div>
     </div>
+    </section>
   )
 }
 

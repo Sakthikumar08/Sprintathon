@@ -7,15 +7,14 @@ import thirdpr from "../assets/3prize.png";
 const Prize = () => {
   return (
     <div className="prize-container">
-      {/* Background Video */}
-      <video autoPlay loop muted className="background-video">
-        <source src="/videos/bg-vid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      
 
       {/* Scrollable Content */}
       <div className="prize-scroll-container">
-        <h1 className="prize-title">Prize Distribution 🏆</h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center py-5">
+  Prize Distribution
+</h1>
+       
 
         {/* Prize Cards Section */}
         <div className="prize-cards">

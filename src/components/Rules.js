@@ -4,13 +4,12 @@ import "./RuleStyle.css";
 const Rules = () => {
   return (
     <div className="rules-container">
-      {/* Background Video */}
-      <video autoPlay loop muted className="background-video">
-        <source src="/videos/bg-vid.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <h1 className="rules-title">⚡RULES & REGULATIONS</h1>
+      
+      
+ <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-center py-5">
+  RULES & REGULATIONS
+</h1>
+      
 
       <div className="rules-list">
         {[

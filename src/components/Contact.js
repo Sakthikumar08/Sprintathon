@@ -80,11 +80,8 @@ const Contact = () => {
     }
   };
   return (
-    <div className='contact-container'>
-    <video autoPlay loop muted className="background-video">
-    <source src="/videos/bg-vid.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <div className='contact-container relative py-12 px-4 sm:px-6 lg:px-8 bg-gray-900'>
+   
     <div className='contact'>
     
       <div className='cont-item'>
