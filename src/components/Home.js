@@ -1,6 +1,7 @@
 import React from 'react';
 import "./HomePage.css";
 import sjcelogo from "../assets/sjcelogo1.png";
+import title from "../assets/SprtLogo.png";
 import Timeline from "./Timeline";
 import Timer from "./Timer";
 
@@ -19,7 +20,7 @@ function Home() {
         </div>
         <h2 className='subtitle-dep'>Department of Electronics and Communication Engineering</h2>
         <h1 className="title"><span>S</span>printathon'25</h1>
-        
+        {/* <div className="title"><img src={title} alt="sprintathon"/></div> */}
         <p className="subtitle">A 24 HOUR NATIONAL LEVEL INNOVATION HACKATHON</p>
      
         <a href="https://forms.gle/bF1p6XJcMhRRZ9F46" ><button className="btn">REGISTER NOW</button></a>

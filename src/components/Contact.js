@@ -4,6 +4,7 @@ import Pranav from "../assets/pranav.png";
 import  ajitha from "../assets/ajitha.png";
 import lakshmi from "../assets/lakshmin.png";
 import niruban from "../assets/niruban.png";
+import lingesh from "../assets/lingesh.png"
 
 import "./ContactStyle.css";
 
@@ -14,6 +15,19 @@ const staffMembers = [
     email: "nirubanr@stjosephs.ac.in",
     image: niruban 
   },
+  {
+    name: "Mr.M.Lingeshwaran",
+    mobile: "+91 96556 37665",
+    email: "@stjosephs.ac.in",
+    image: lingesh
+  },
+  {
+    name: "Dr.D.Lakshmi",
+    mobile: "+91 98416 69119",
+    email: "@stjosephs.ac.in",
+    image:lingesh
+  },
+
   
   
 ];
