@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavbarStyle.css";
-import logo from "../../assets/lojj.jpg"; // Adjust the path based on your project structure
+import logo from "../../assets/SprtLogo.png"; // Adjust the path based on your project structure
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
