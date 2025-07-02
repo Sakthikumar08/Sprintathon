@@ -50,7 +50,7 @@ const Sponsors = () => {
         ))}
       </div>
       {/*  */}
-      <h2 className="sponsor-title">💡 Industry Partner</h2>
+      <h2 className="sponsor-title">💡 Industry Partners</h2>
       <div className="sponsor-container">
         {Industry.map((Industry, index) => (
           <div key={index} className="sponsor-card">

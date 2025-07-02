@@ -4,7 +4,8 @@ import Pranav from "../assets/pranav.png";
 import  ajitha from "../assets/ajitha.png";
 import lakshmi from "../assets/lakshmin.png";
 import niruban from "../assets/niruban.png";
-import lingesh from "../assets/lingesh.png"
+import lingesh from "../assets/lingesh.png";
+import Lakshmi from "../assets/Lakshmi.png"
 
 import "./ContactStyle.css";
 
@@ -25,7 +26,7 @@ const staffMembers = [
     name: "Dr.D.Lakshmi",
     mobile: "+91 98416 69119",
     email: "@stjosephs.ac.in",
-    image:lingesh
+    image:Lakshmi
   },
 
   
@@ -134,7 +135,7 @@ const Contact = () => {
                     <h3>General Inquiries :</h3>
                     <div className='contact-info-org'><p>Pranav J</p><p>+91 73580 97274</p></div>
                     <div className='contact-info-org'><p>Sakthikumar P</p><p>+91 95666 74323</p></div>
-                    <div className='contact-info-org'><p>Franesh T</p><p>+91 97890 45440</p></div>
+                   
                    
                 </div>
             </div>

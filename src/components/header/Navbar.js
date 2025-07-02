@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./NavbarStyle.css";
-import logo from "../../assets/SprtLogo.png"; // Adjust the path based on your project structure
+import logo from "../../assets/SprtLogo.png"; 
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <header className="navbar">
-      {/* Logo */}
+     
       <div className="brand">
        
           <img src={logo} alt="Logo" className="logo" />

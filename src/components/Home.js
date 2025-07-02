@@ -34,7 +34,7 @@ function Home() {
 
 Hosted by St. Joseph's College of Engineering, Department of ECE, this hackathon serves as a launchpad for young innovators, tech enthusiasts, and problem-solvers to develop impactful solutions using emerging technologies.
 
-Whether you're passionate about AI, IoT, Drone Technology, Sustainability, or Cybersecurity,  SPRINTATHON 25 provides the perfect platform to collaborate, compete, and showcase your technical prowess. With expert mentorship, industry networking, and an impressive prize pool of ₹3.15 Lakh, this event promises to be an unforgettable learning experience.
+Whether you're passionate about AI, IoT, Drone Technology, Sustainability, or Cybersecurity,  SPRINTATHON 25 provides the perfect platform to collaborate, compete, and showcase your technical prowess. With expert mentorship, industry networking, and an impressive prize pool of ₹1.75 Lakh, this event promises to be an unforgettable learning experience.
 
 Are you ready to push boundaries and create the future? Join us at SPRINTATHON 25 and turn your ideas into reality!</p>
         </div>
