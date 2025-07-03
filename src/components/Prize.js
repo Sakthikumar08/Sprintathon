@@ -17,7 +17,7 @@ const Prize = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Premium title section */}
         <div className="text-center mb-20">
-          <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-6 tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00eaff] via-[#8f00ff] to-[#ff00e6] animate-text">
               PRIZE DISTRIBUTION
             </span>

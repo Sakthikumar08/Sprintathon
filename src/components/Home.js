@@ -6,6 +6,7 @@ import Timeline from "./Timeline";
 import Timer from "./Timer";
 import clglogo1 from "../assets/clglogo1.png";
 import clglogo2 from "../assets/clglogo2.png";
+import generateRaindrop from "./generateRaindrop";
 
 function Home() {
   return (
@@ -16,6 +17,8 @@ function Home() {
         <source src="/videos/bg-vid.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      
+     
 
       <div className="content">
        

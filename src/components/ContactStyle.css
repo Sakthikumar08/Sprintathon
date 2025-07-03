@@ -16,9 +16,7 @@
   --yellow:rgb(165, 118, 6);
 }
 
-body {
-  background-color: var(--bg);
-}
+
 .contact-container{
   position: relative;
   width: 100%;

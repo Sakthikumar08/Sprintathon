@@ -16,11 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: black;
-  color: white;
-  overflow-x: hidden;
-}
+
 
 .navbar {
   position: fixed;
