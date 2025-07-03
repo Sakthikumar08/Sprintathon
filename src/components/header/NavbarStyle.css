@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
-:root{
-  --text:white;
-  --bgclr:#d900ff;
-  --spbgclr:purple;
+:root {
+  --primary-blue: #011446;
+  --accent-orange: #e48127;
+  --accent-cyan: #63cad2;
+  --accent-brown: #937b60;
+  --text-black: #000000;
 }
 * {
   padding: 0;
@@ -17,8 +19,8 @@ html {
 }
 
 body {
-  background: black;
-  color: white;
+  background: white;
+  color: var(--text-black);
   overflow-x: hidden;
 }
 
@@ -30,33 +32,56 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
-  background: rgba(0, 0, 0, 0.1);
- 
+  padding: 1.5rem 3rem;
+  background: transparent;
+  backdrop-filter: none;
+  border: none;
 }
 
-/* Brand */
+/* Logo Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+}
 
+.logo {
+  width: 180px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(1, 20, 70, 0.3));
+  transition: transform 0.3s ease;
+}
 
+.logo:hover {
+  transform: scale(1.05);
+}
 
-
-/* Navigation */
+/* Navigation - Floating pill design */
 .nav-list {
   display: flex;
   justify-content: center;
-  background: rgba(151, 10, 216, 0.1);
-  padding: 0.8rem 2rem;
-  border-radius: 12px;
-  border: 2px solid rgba(153, 13, 228, 0.3);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 2.5rem;
+  border-radius: 6px;
+  border: 1px solid rgba(80, 81, 82, 0.3);
+  backdrop-filter: blur(20px);
   transition: 0.4s ease-in-out;
- 
+  box-shadow: 0 8px 32px rgba(1, 20, 70, 0.1);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-list:hover {
+  box-shadow: 0 12px 40px rgba(1, 20, 70, 0.15);
+  border-color: rgba(99, 202, 210, 0.3);
 }
 
 .nav-list ul {
   list-style: none;
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
+  align-items: center;
 }
 
 .nav-list ul li {
@@ -64,47 +89,38 @@ body {
 }
 
 .nav-list ul li a {
-  font-size: 1.8rem;
-  color: white;
+  font-size: 1.6rem;
+  color: var(--primary-blue);
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.2rem;
   position: relative;
   transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  border-radius: 25px;
 }
 
 .nav-list ul li a:hover {
-  color: var(--bgclr);
+  color: var(--accent-orange);
+  background: rgba(228, 129, 39, 0.1);
+  transform: translateY(-2px);
 }
 
 .nav-list ul li a::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 50%;
   width: 0;
-  height: 3px;
-  background: var(--bgclr);
+  height: 2px;
+  background: linear-gradient(45deg, var(--accent-orange), var(--accent-cyan));
   transition: width 0.3s ease-in-out;
   transform: translateX(-50%);
+  border-radius: 2px;
 }
 
 .nav-list ul li a:hover::before {
-  width: 100%;
-}
-
-
-/* Logo */
-.brand {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  width: 120px; /* Adjust size as needed */
-  height: auto;
-  margin-right: -60px;
-  padding-left: 18px;
+  width: 80%;
 }
 
 /* Hamburger Menu */
@@ -113,15 +129,15 @@ body {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  
+  z-index: 1002;
 }
 
 .hamburger .bar {
   width: 30px;
   height: 3px;
-  background: white;
+  background: var(--primary-blue);
   transition: 0.3s ease-in-out;
- 
+  border-radius: 2px;
 }
 
 .hamburger.active .bar:nth-child(1) {
@@ -138,45 +154,75 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .navbar {
+    padding: 1.5rem 2rem;
+  }
+
   .nav-list {
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: -100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(15px);
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
     border-radius: 0;
-    padding: 2rem 0;
+    padding: 8rem 2rem 2rem;
     transition: left 0.5s ease-in-out;
+    border: none;
+    box-shadow: none;
+    transform: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
+
   .logo {
-    width: 80px; /* Adjust size as needed */
-    height: auto;
-    margin-right: -60px;
-    padding-left: 18px;
+    width: 140px;
   }
-  
+
   .nav-list.active {
     left: 0;
   }
 
   .nav-list ul {
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .nav-list ul li a {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    display: block;
   }
 
   .hamburger {
     display: flex;
-    margin-left: 230px;
-   
   }
 }
-/* Add this at the end of your existing CSS */
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .nav-list ul li a {
+    font-size: 1.8rem;
+  }
+}
+
 .active-nav-item {
-  color: var(--bgclr) !important;
+  color: var(--accent-orange) !important;
+  background: rgba(228, 129, 39, 0.1) !important;
 }
 
 .active-nav-item::before {
-  width: 100% !important;
+  width: 80% !important;
 }
