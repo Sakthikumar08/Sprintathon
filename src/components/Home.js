@@ -3,7 +3,7 @@ import "./HomePage.css"
 
 import Timer from "./Timer"
 import clglogo1 from "../assets/clglogo1.png"
-import clglogo2 from "../assets/clglogo2.png"
+import clglogo2 from "../assets/clglogo22.png"
 import logo from "../assets/SprtLogo.png"
 
 

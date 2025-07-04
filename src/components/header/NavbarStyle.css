@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
 :root {
   --primary-blue: #011446;
   --accent-orange: #e48127;
@@ -6,6 +7,7 @@
   --accent-brown: #937b60;
   --text-black: #000000;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -18,26 +20,28 @@ html {
   scroll-behavior: smooth;
 }
 
-
 body {
   background: white;
   color: var(--text-black);
   overflow-x: hidden;
 }
 
-
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   background: transparent;
   backdrop-filter: none;
   border: none;
+  height: auto;
+  min-height: 80px;
 }
 
 /* Logo Brand */
@@ -45,6 +49,7 @@ body {
   display: flex;
   align-items: center;
   z-index: 1001;
+  flex-shrink: 0;
 }
 
 .logo {
@@ -62,16 +67,19 @@ body {
 .nav-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.95);
-  padding: 1rem 2.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 6px;
   border: 1px solid rgba(80, 81, 82, 0.3);
   backdrop-filter: blur(20px);
-  transition: 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 0 8px 32px rgba(1, 20, 70, 0.1);
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 .nav-list:hover {
@@ -82,36 +90,43 @@ body {
 .nav-list ul {
   list-style: none;
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list ul li {
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-list ul li a {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: var(--primary-blue);
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.8rem 1.2rem;
+  padding: 0.6rem 1rem;
   position: relative;
   transition: all 0.3s ease-in-out;
   font-weight: 600;
-  border-radius: 25px;
+  border-radius: 20px;
+  display: block;
+  line-height: 1.2;
 }
 
 .nav-list ul li a:hover {
   color: var(--accent-orange);
-  background: rgba(228, 129, 39, 0.1);
-  transform: translateY(-2px);
+  background: rgba(228, 129, 39, 0.12);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(228, 129, 39, 0.15);
 }
 
 .nav-list ul li a::before {
   content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: 2px;
   left: 50%;
   width: 0;
   height: 2px;
@@ -122,7 +137,7 @@ body {
 }
 
 .nav-list ul li a:hover::before {
-  width: 80%;
+  width: 70%;
 }
 
 /* Hamburger Menu */
@@ -132,6 +147,7 @@ body {
   gap: 5px;
   cursor: pointer;
   z-index: 1002;
+  flex-shrink: 0;
 }
 
 .hamburger .bar {
@@ -157,7 +173,7 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
   .navbar {
-    padding: 1.5rem 2rem;
+    padding: 1rem 2rem;
   }
 
   .nav-list {
@@ -209,6 +225,7 @@ body {
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 1.5rem;
+    min-height: 70px;
   }
 
   .logo {
@@ -226,5 +243,5 @@ body {
 }
 
 .active-nav-item::before {
-  width: 80% !important;
+  width: 70% !important;
 }

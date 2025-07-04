@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import logo from "../../assets/SprtLogo.png";
-import "./NavbarStyle.css"; 
+"use client"
+
+import { useState } from "react"
+import { Link } from "react-scroll"
+import logo from "../../assets/SprtLogo.png"
+import "./NavbarStyle.css"
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const navItems = [
     { id: "home", name: "Home" },
-    {id:"timeline",name:"Timeline"},
+    { id: "timeline", name: "Timeline" },
     { id: "domain", name: "Domains" },
     { id: "rules", name: "Rules" },
     { id: "prize", name: "Prize" },
     { id: "sponsors", name: "Sponsors" },
     { id: "contact", name: "Contact" },
-    
-  ];
+  ]
 
   return (
     <header className="navbar">
@@ -34,7 +35,7 @@ const Navbar = () => {
                 smooth={true}
                 duration={500}
                 offset={-100}
-                className="nav-link" 
+                className="nav-link"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.name}
@@ -44,18 +45,13 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      {/* Hamburger Menu for Mobile */}
-      <div 
-        className={`hamburger ${menuOpen ? "active" : ""}`} 
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
+      <div className={`hamburger ${menuOpen ? "active" : ""}`} onClick={() => setMenuOpen(!menuOpen)}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-      <div style={{fontSize:"0.1px"}}>h</div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
