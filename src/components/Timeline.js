@@ -1,4 +1,4 @@
-import React from "react";
+"use client"
 
 const Timeline = () => {
   const events = [
@@ -46,66 +46,153 @@ const Timeline = () => {
       title: "THE END OF HACKATHON",
       position: "center",
     },
-  ];
+  ]
 
   return (
-    <div className="relative py-12 px-4 sm:px-6 lg:px-8 bg-gray-900">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center text-white mb-8 sm:mb-12">
-          HACKATHON TIMELINE
-        </h2>
-        
-        {/* Timeline line - position changes on mobile */}
-        <div className="absolute left-4 sm:left-1/2 w-1 h-[535px] sm:h-[820px] bg-purple-500 sm:transform sm:-translate-x-1/2"></div>
-        
-        {/* Timeline items */}
-        <div className="relative space-y-8 pl-8 sm:pl-0">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className={`flex ${
-                event.position === "left" 
-                  ? "justify-start sm:justify-start" 
-                  : event.position === "right" 
-                    ? "justify-start sm:justify-end" 
-                    : "justify-center"
-              }`}
-            >
-              <div
-                className={`w-full sm:w-5/12 p-4 sm:p-6 rounded-lg ${
-                  event.position === "center" 
-                    ? "bg-purple-600 text-center w-full sm:max-w-md mx-auto" 
-                    : "bg-gray-800 border border-purple-400"
-                } relative`}
-              >
-                {/* Dot on timeline - position changes on mobile */}
-                {event.position !== "center" && (
-                  <div
-                    className={`absolute top-1/2 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-purple-500 transform -translate-y-1/2 ${
-                      event.position === "left" 
-                        ? "-left-8 sm:-right-6 sm:left-auto" 
-                        : "-left-8 sm:-left-6"
-                    }`}
-                  ></div>
+    <div
+      className="relative py-16 px-4 sm:px-6 lg:px-8"
+      style={{ background: "rgba(18, 86, 175, 0.1)", backdropFilter: "blur(0px)" }}
+    >
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4" style={{ color: "#011446" }}>
+            HACKATHON TIMELINE
+          </h2>
+          <div className="w-24 h-1 mx-auto" style={{ background: "linear-gradient(45deg, #e48127, #63cad2)" }}></div>
+        </div>
+
+        {/* Timeline Container */}
+        <div className="relative">
+          {/* Central Timeline Line */}
+          <div
+            className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full"
+            style={{
+              background: "linear-gradient(to bottom, #63cad2, #011446, #e48127, #011446, #63cad2)",
+              boxShadow: "0 0 10px rgba(99, 202, 210, 0.3)",
+            }}
+          ></div>
+
+          {/* Timeline Events */}
+          <div className="space-y-12">
+            {events.map((event, index) => (
+              <div key={index} className="relative flex items-center">
+                {event.position === "center" ? (
+                  // Center Final Event
+                  <div className="w-full flex justify-center">
+                    <div
+                      className="relative px-8 py-6 rounded-xl text-center max-w-md transform transition-all duration-300 hover:scale-105"
+                      style={{
+                        background: "linear-gradient(135deg, #011446, #e48127)",
+                        boxShadow: "0 10px 30px rgba(1, 20, 70, 0.3)",
+                      }}
+                    >
+                      <h3 className="text-xl font-bold text-white">{event.title}</h3>
+                      {/* Center Dot */}
+                      <div
+                        className="absolute -left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-full border-4 border-white"
+                        style={{
+                          background: "#e48127",
+                          boxShadow: "0 0 15px rgba(228, 129, 39, 0.6)",
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                ) : (
+                  // Left and Right Events
+                  <div className={`w-full flex ${event.position === "left" ? "justify-start" : "justify-end"}`}>
+                    <div className="w-5/12 relative">
+                      <div
+                        className={`relative p-6 rounded-lg transform transition-all duration-300 hover:scale-105 hover:-translate-y-2 ${
+                          event.position === "left" ? "mr-8" : "ml-8"
+                        }`}
+                        style={{
+                          background: "rgba(255, 255, 255, 0.95)",
+                          border: "2px solid #63cad2",
+                          boxShadow: "0 8px 25px rgba(1, 20, 70, 0.1)",
+                          backdropFilter: "blur(10px)",
+                        }}
+                      >
+                        {/* Date Badge */}
+                        <div
+                          className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-3"
+                          style={{
+                            background: "linear-gradient(45deg, #937b60, #e48127)",
+                            color: "white",
+                          }}
+                        >
+                          {event.date}
+                        </div>
+
+                        {/* Title */}
+                        <h3 className="text-lg font-bold leading-tight" style={{ color: "#011446" }}>
+                          {event.title}
+                        </h3>
+
+                        {/* Arrow pointing to timeline */}
+                        <div
+                          className={`absolute top-1/2 transform -translate-y-1/2 ${
+                            event.position === "left" ? "-right-4" : "-left-4"
+                          }`}
+                        >
+                          <div
+                            className="w-0 h-0"
+                            style={{
+                              borderTop: "8px solid transparent",
+                              borderBottom: "8px solid transparent",
+                              [event.position === "left" ? "borderLeft" : "borderRight"]: "8px solid #63cad2",
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+
+                      {/* Timeline Dot */}
+                      <div
+                        className={`absolute top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full border-3 border-white ${
+                          event.position === "left" ? "-right-2" : "-left-2"
+                        }`}
+                        style={{
+                          background: "#e48127",
+                          boxShadow: "0 0 10px rgba(228, 129, 39, 0.5)",
+                        }}
+                      ></div>
+                    </div>
+                  </div>
                 )}
-                
-                {event.date && (
-                  <p className="text-sm sm:text-base text-purple-300 font-semibold mb-1 sm:mb-2">
-                    {event.date}
-                  </p>
-                )}
-                <h3 className={`text-sm sm:text-xl font-bold ${
-                  event.position === "center" ? "text-white" : "text-white"
-                }`}>
-                  {event.title}
-                </h3>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Timeline;
+      <style jsx>{`
+        .border-3 {
+          border-width: 3px;
+        }
+
+        /* Smooth animations */
+        @media (max-width: 768px) {
+          .w-5\\/12 {
+            width: 100% !important;
+          }
+          
+          .mr-8, .ml-8 {
+            margin: 0 !important;
+          }
+          
+          .-right-2, .-left-2 {
+            left: -8px !important;
+            right: auto !important;
+          }
+          
+          .-right-4, .-left-4 {
+            left: -16px !important;
+            right: auto !important;
+          }
+        }
+      `}</style>
+    </div>
+  )
+}
+
+export default Timeline

@@ -1,49 +1,67 @@
+:root {
+  --primary-blue: #011446;
+  --accent-orange: #e48127;
+  --accent-cyan: #63cad2;
+  --accent-brown: #937b60;
+  --text-black: #000000;
+}
 
-  
-  .timer-container {
-    text-align: center;
-    margin-top: 5rem;
-  }
-  
+.timer-container {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.timer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid var(--accent-cyan);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(1, 20, 70, 0.15);
+  width: 120px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.timer-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(228, 129, 39, 0.3);
+  border-color: var(--accent-orange);
+}
+
+.timer-box span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.timer-box .label {
+  font-size: 1rem;
+  color: var(--accent-brown);
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+@media (max-width: 568px) {
   .timer {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
   }
-  
   .timer-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1e1e1e; /* Darker box background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(144, 61, 193, 0.3);
-    width: 120px; /* Fixed width for all cards */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 60px;
+    padding: 15px 10px;
   }
-  
-  .timer-box:hover {
-    transform: translateY(-10px); /* Hover effect: move card up */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Hover effect: increase shadow */
-  }
-  
   .timer-box span {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
   }
-  
   .timer-box .label {
-    font-size: 1rem;
-    color: #bbbbbb; /* Light gray for labels */
-    margin-top: 5px;
+    font-size: 0.8rem;
   }
-  @media (max-width: 568px){
-    .timer {
-    
-      gap: 10px;
-    }
-    .timer-box{
-      width: 60px;
-    }
-  }
+}

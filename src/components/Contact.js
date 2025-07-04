@@ -13,13 +13,13 @@ const staffMembers = [
   {
     name: "Dr.D.Lakshmi",
     mobile: "+91 98416 69119",
-    email: "@stjosephs.ac.in",
+    email: "lakshmid@stjosephs.ac.in",
     image:Lakshmi
   },
   {
     name: "Mr.M.Lingeshwaran",
     mobile: "+91 96556 37665",
-    email: "@stjosephs.ac.in",
+    email: "lingeshwaranm@stjosephs.ac.in",
     image: lingesh
   },
   {
@@ -80,7 +80,7 @@ const Contact = () => {
     }
   };
   return (
-    <div className='contact-container relative py-12 px-4 sm:px-6 lg:px-8 bg-gray-900'>
+    <div className='contact-container relative py-12 px-4 sm:px-6 lg:px-8'>
    
     <div className='contact'>
     
