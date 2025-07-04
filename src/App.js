@@ -1,6 +1,6 @@
 import Navbar from "./components/header/Navbar"
 import Home from "./components/Home";
-import Timeline from "./components/Timeline";
+import Timeabout from "./components/Timeabout";
 import Domain from "./components/Domain"
 import Prize from "./components/Prize"
 import Rules from "./components/Rules"
@@ -21,7 +21,7 @@ function App() {
         </section>
 
         <section id="timeline">
-          <Timeline/>
+          <Timeabout/>
         </section>
 
         <section id="domain">
