@@ -40,3 +40,8 @@
   background-clip: text !important;
   text-shadow: 0 4px 8px rgba(1, 20, 70, 0.2) !important;
 }
+@media (max-width: 668px){
+  .domain{
+    height: 210vh;
+  }
+}

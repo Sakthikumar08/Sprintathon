@@ -24,7 +24,7 @@ function App() {
           <Timeabout/>
         </section>
 
-        <section id="domain">
+        <section id="domain" className="h-[110vh] max-[668px]:h-[215vh]">
           <Domain />
         </section>
 
