@@ -1,4 +1,5 @@
 "use client"
+import Aboutus from "./Aboutus"
 
 const Timeline = () => {
   const events = [
@@ -49,6 +50,7 @@ const Timeline = () => {
   ]
 
   return (
+    <div>
     <div
       className="relative py-16 px-4 sm:px-6 lg:px-8"
       style={{ background: "rgba(18, 86, 175, 0.1)", backdropFilter: "blur(0px)" }}
@@ -164,6 +166,8 @@ const Timeline = () => {
           </div>
         </div>
       </div>
+{/*  */}
+      
 
       <style jsx>{`
         .border-3 {
@@ -192,6 +196,9 @@ const Timeline = () => {
         }
       `}</style>
     </div>
+
+    <Aboutus/>
+      </div>
   )
 }
 

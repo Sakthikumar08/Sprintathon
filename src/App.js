@@ -1,5 +1,6 @@
 import Navbar from "./components/header/Navbar"
-import Home from "./components/Home"
+import Home from "./components/Home";
+import Timeline from "./components/Timeline";
 import Domain from "./components/Domain"
 import Prize from "./components/Prize"
 import Rules from "./components/Rules"
@@ -19,8 +20,16 @@ function App() {
           <Home />
         </section>
 
+        <section id="timeline">
+          <Timeline/>
+        </section>
+
         <section id="domain">
           <Domain />
+        </section>
+
+        <section id="rules" className="h-[110vh] max-[668px]:h-[90vh]">
+          <Rules />
         </section>
 
         <section id="prize">
@@ -31,9 +40,7 @@ function App() {
           <Sponsors />
         </section>
 
-        <section id="rules" className="h-[110vh] max-[668px]:h-[90vh]">
-          <Rules />
-        </section>
+        
 
         <section id="contact" style={{ height: "200vh" }}>
           <Contact />

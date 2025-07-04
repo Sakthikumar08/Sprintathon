@@ -5,7 +5,9 @@ import  ajitha from "../assets/ajitha.png";
 import lakshmi from "../assets/lakshmin.png";
 import niruban from "../assets/niruban.png";
 import lingesh from "../assets/lingesh.png";
-import Lakshmi from "../assets/Lakshmi.png"
+import Lakshmi from "../assets/Lakshmi.png";
+import Aathavan from "../assets/aathavan.png";
+import Hasan from "../assets/hasan.png";
 
 import "./ContactStyle.css";
 
@@ -28,6 +30,7 @@ const staffMembers = [
     email: "nirubanr@stjosephs.ac.in",
     image: niruban 
   },
+ 
   
   
   
@@ -51,6 +54,18 @@ const stdMembers = [
     mobile: "+91 86674 62361",
     email: "ajithamathivanan@gmail.com",
     image: ajitha 
+  },
+   {
+    name: "Athavan",
+    mobile: "+91 94563 48484",
+    email: "dbhfdsfhbds@gmail.com",
+    image: Aathavan
+  },
+  {
+    name: "Hasan",
+    mobile: "+91 94563 48484",
+    email: "dbhfdsfhbds@gmail.com",
+    image: Hasan
   }
 ];
 

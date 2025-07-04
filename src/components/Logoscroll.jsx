@@ -21,6 +21,11 @@ const Logoscroll = () => {
     { src: logo4, alt: "Sponsor 2" },
     { src: logo5, alt: "Sponsor 4" },
     { src: logo6, alt: "Sponsor 5" },
+     { src: logo2, alt: "Sponsor 1" },
+    { src: logo3, alt: "Enthutech" },
+    { src: logo4, alt: "Sponsor 2" },
+    { src: logo5, alt: "Sponsor 4" },
+    { src: logo6, alt: "Sponsor 5" },
   ];
 
   // Create enough duplicates for smooth scrolling
@@ -34,7 +39,7 @@ const Logoscroll = () => {
             key={index}
             src={icon.src} // Now this will reference the actual imported image
             alt={icon.alt}
-            className="w-12 h-12 md:w-16 md:h-16 object-contain flex-shrink-0"
+            className="w-20 h-20 md:w-24 md:h-24 object-contain flex-shrink-0"
           />
         ))}
       </div>
