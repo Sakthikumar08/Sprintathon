@@ -56,15 +56,15 @@ const stdMembers = [
     image: ajitha 
   },
    {
-    name: "Athavan",
-    mobile: "+91 94563 48484",
-    email: "dbhfdsfhbds@gmail.com",
+    name: "Aathavan valanarasu LV",
+    mobile: "+91 93420 49639",
+    email: "aathavan.valanarasu@gmail.com",
     image: Aathavan
   },
   {
-    name: "Hasan",
-    mobile: "+91 94563 48484",
-    email: "dbhfdsfhbds@gmail.com",
+    name: "Hasan Dhanish J",
+    mobile: "+91 79041 87345",
+    email: "hasandhanish05@gmail.com",
     image: Hasan
   }
 ];
@@ -146,9 +146,9 @@ const Contact = () => {
                 </div>
                 <div className="contact-info">
                     <h3>General Inquiries :</h3>
-                    <div className='contact-info-org'><p>Pranav J</p><p>+91 73580 97274</p></div>
+                    
                     <div className='contact-info-org'><p>Sakthikumar P</p><p>+91 95666 74323</p></div>
-                   
+                    <div className='contact-info-org'><p>Aathavan valanarasu LV</p><p>+91 93420 49639</p></div>
                    
                 </div>
             </div>

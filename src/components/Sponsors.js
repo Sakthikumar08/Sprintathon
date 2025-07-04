@@ -7,7 +7,7 @@ import sponsor4 from '../assets/sponsor4.png';
 import sponsor5 from '../assets/sponsor5.png';
 import sponsor6 from "../assets/data.png";
 import sponsor7 from "../assets/enthutech.png";
-import sponsor8 from "../assets/emblock.png";
+import sponsor8 from "../assets/sponsor6.png";
 import Logoscroll from './Logoscroll';
 
 
@@ -18,12 +18,15 @@ const sponsors = [
   
 ];
 const Industry = [
-  { img: sponsor2, name: "IQmath Technologies" },
+  { img: sponsor8, name: "Candela" },
+  { img: sponsor4, name: "DADB" },
+  
   { img: sponsor1, name: "Converse data solutions" },
   { img: sponsor7, name: "Enthutech" },
  /*  { img: sponsor8, name: "EMBLOCK" }, */
-  { img: sponsor4, name: "DADB" },
+  
   { img: sponsor5, name: "Ematix" },
+  { img: sponsor2, name: "IQmath Technologies" },
   
 ];
 

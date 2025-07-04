@@ -6,7 +6,7 @@ const Prize = () => {
   return (
     <div
       className="min-h-screen py-24 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
-    
+      style={{background:"rgba(18, 86, 175, 0.1)",}}
     >
       {/* Sophisticated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
