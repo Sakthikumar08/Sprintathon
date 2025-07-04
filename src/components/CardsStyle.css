@@ -34,8 +34,18 @@
 @media (max-width: 768px) {
   .cards-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 5px;
+    gap: 20px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+    margin-top: 15px;
   }
 }
 
@@ -54,6 +64,20 @@
   cursor: pointer;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(1, 20, 70, 0.1);
+}
+
+@media (max-width: 768px) {
+  .tilt-card {
+    max-width: 160px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tilt-card {
+    max-width: 280px;
+    height: 110px;
+  }
 }
 
 .tilt-card:hover {
@@ -114,15 +138,27 @@
   padding: 15px;
 }
 
+@media (max-width: 768px) {
+  .tilt-card-inner {
+    padding: 10px;
+  }
+}
+
 .tilt-card-inner i {
   font-size: 30px;
   margin-bottom: 8px;
-  color: var(--primary-blue);
-  transition: color 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .tilt-card-inner i {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
 }
 
 .tilt-card:hover .tilt-card-inner i {
-  color: var(--accent-orange);
+  transform: scale(1.1);
 }
 
 .hover-text {
@@ -131,6 +167,19 @@
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .hover-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hover-text {
+    font-size: 13px;
+  }
 }
 
 /* Simple Popup Styles */
@@ -318,6 +367,7 @@
   .simple-popup {
     max-width: 95%;
     margin: 10px;
+    max-height: 85vh;
   }
 
   .popup-header {

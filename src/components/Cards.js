@@ -7,6 +7,7 @@ const cardData = [
   {
     name: "Defence and Aerospace",
     icon: "fa-jet-fighter-up",
+    color: "#8B0000", // Dark Red
     problems: [
       {
         id: "PSD101",
@@ -43,6 +44,7 @@ const cardData = [
   {
     name: "Wireless and IoT Networks",
     icon: "fa-wifi",
+    color: "#1E90FF", // Dodger Blue
     problems: [
       {
         id: "PSI201",
@@ -77,6 +79,7 @@ const cardData = [
   {
     name: "Renewable Energy",
     icon: "fa-leaf",
+    color: "#228B22", // Forest Green
     problems: [
       {
         id: "PSR501",
@@ -119,6 +122,7 @@ const cardData = [
   {
     name: "Health Monitoring",
     icon: "fa-heartbeat",
+    color: "#DC143C", // Crimson Red
     problems: [
       {
         id: "PSH301",
@@ -161,6 +165,7 @@ const cardData = [
   {
     name: "Waste Management",
     icon: "fa-recycle",
+    color: "#8B4513", // Saddle Brown
     problems: [
       {
         id: "PSW701",
@@ -209,6 +214,7 @@ const cardData = [
   {
     name: "Smart Farming",
     icon: "fa-tractor",
+    color: "#32CD32", // Lime Green
     problems: [
       {
         id: "PSA601",
@@ -251,6 +257,7 @@ const cardData = [
   {
     name: "Smart Education",
     icon: "fa-graduation-cap",
+    color: "#FF8C00", // Dark Orange
     problems: [
       {
         id: "PSE401",
@@ -293,6 +300,7 @@ const cardData = [
   {
     name: "Cybersecurity",
     icon: "fa-lock",
+    color: "#800080", // Purple
     problems: [
       {
         id: "PSC801",
@@ -335,6 +343,7 @@ const cardData = [
   {
     name: "AR & VR",
     icon: "fa-glasses",
+    color: "#FF1493", // Deep Pink
     problems: [
       {
         id: "PSV901",
@@ -371,6 +380,7 @@ const cardData = [
   {
     name: "Edge Computing",
     icon: "fa-network-wired",
+    color: "#2F4F4F", // Dark Slate Gray
     problems: [
       {
         id: "PSC802",
@@ -389,6 +399,7 @@ const cardData = [
   {
     name: "Student Innovation",
     icon: "fa-lightbulb",
+    color: "#FFD700", // Gold
     problems: [
       {
         id: "PS001",
@@ -421,7 +432,7 @@ const TiltCard = ({ data, onClick }) => {
       <div className="bottom-left"></div>
       <div className="bottom-right"></div>
       <div className="tilt-card-inner">
-        <i className={`fa-solid ${data.icon}`}></i>
+        <i className={`fa-solid ${data.icon}`} style={{ color: data.color }}></i>
         <p className="hover-text">{data.name}</p>
       </div>
     </div>

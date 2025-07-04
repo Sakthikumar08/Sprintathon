@@ -130,10 +130,10 @@ const Contact = () => {
       <div className="connect-section">
                 <h2>CONNECT</h2>
                 <div className="social-icons">
-                    <a href="#"><i className="fab fa-facebook"></i></a>
-                    <a href="#"><i className="fab fa-instagram"></i></a>
-                    <a href="#"><i className="fab fa-twitter"></i></a>
-                    <a href="#"><i className="fab fa-linkedin"></i></a>
+                   {/*  <a href="#"><i className="fab fa-facebook"></i></a> */}
+                    <a href="https://www.instagram.com/sprintathon25?igsh=ZXBhbjNsY25tOTlh"><i className="fab fa-instagram"></i></a>
+                    {/* <a href="#"><i className="fab fa-twitter"></i></a> */}
+                    <a href="https://www.linkedin.com/in/ece-sjce-45553b29a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i className="fab fa-linkedin"></i></a>
                 </div>
                 <div className="map-container">
                     <iframe

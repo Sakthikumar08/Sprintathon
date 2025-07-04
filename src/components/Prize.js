@@ -4,10 +4,8 @@ import thirdpr from "../assets/3prize.png"
 
 const Prize = () => {
   return (
-    <div
-      className="min-h-screen py-24 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
-      style={{background:"rgba(18, 86, 175, 0.1)",}}
-    >
+    <div className="min-h-screen py-24 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
+    style={{background:"rgba(18, 86, 175, 0.1)",}}>
       {/* Sophisticated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -28,7 +26,6 @@ const Prize = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Premium title section */}
         <div className="text-center mb-20">
-
           <h1 className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
             <span
               className="text-transparent bg-clip-text"
@@ -38,7 +35,6 @@ const Prize = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-
               PRIZE DISTRIBUTION
             </span>
           </h1>
@@ -47,8 +43,8 @@ const Prize = () => {
           </p>
         </div>
 
-        {/* Elevated prize cards */}
-        <div className="flex flex-col lg:flex-row justify-center items-stretch gap-10 mb-24">
+        {/* Desktop Prize Layout */}
+        <div className="hidden lg:flex flex-row justify-center items-stretch gap-10 mb-24">
           {/* 2nd Prize (Silver) */}
           <div
             className="w-full lg:w-1/4 xl:w-1/3 max-w-md rounded-2xl p-8 shadow-lg transition-all duration-500 hover:-translate-y-2"
@@ -143,6 +139,102 @@ const Prize = () => {
           </div>
         </div>
 
+        {/* Mobile Prize Layout - Correct Order */}
+        <div className="flex lg:hidden flex-col items-center gap-8 mb-24">
+          {/* 1st Prize (Gold) - First on Mobile */}
+          <div
+            className="w-full max-w-sm rounded-2xl p-8 shadow-xl relative"
+            style={{
+              background: "rgba(255, 255, 255, 0.95)",
+              border: "3px solid #e48127",
+              backdropFilter: "blur(15px)",
+            }}
+          >
+            <div
+              className="absolute -top-3 -right-3 text-xs font-bold px-3 py-1 rounded-full rotate-12 shadow-md"
+              style={{ background: "#e48127", color: "white" }}
+            >
+              TOP PRIZE
+            </div>
+            <div className="flex justify-center mb-8">
+              <img src={firstpr || "/placeholder.svg"} alt="First Prize" className="w-32 h-32 object-contain" />
+            </div>
+            <div className="text-center">
+              <span
+                className="inline-block px-4 py-1 text-sm font-medium rounded-full mb-6 tracking-wider"
+                style={{ background: "rgba(228, 129, 39, 0.2)", color: "#011446" }}
+              >
+                CHAMPION
+              </span>
+              <h2 className="text-4xl font-bold mb-6" style={{ color: "#011446" }}>
+                ₹1,00,000
+              </h2>
+              <div
+                className="h-px w-4/5 mx-auto mb-6"
+                style={{ background: "linear-gradient(to right, transparent, #e48127, transparent)" }}
+              ></div>
+            </div>
+          </div>
+
+          {/* 2nd Prize (Silver) - Second on Mobile */}
+          <div
+            className="w-full max-w-sm rounded-2xl p-6 shadow-lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.9)",
+              border: "2px solid #63cad2",
+              backdropFilter: "blur(15px)",
+            }}
+          >
+            <div className="flex justify-center mb-6">
+              <img src={secondpr || "/placeholder.svg"} alt="Second Prize" className="w-24 h-24 object-contain" />
+            </div>
+            <div className="text-center">
+              <span
+                className="inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 tracking-wider"
+                style={{ background: "rgba(99, 202, 210, 0.2)", color: "#011446" }}
+              >
+                1ST RUNNER-UP
+              </span>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#011446" }}>
+                ₹50,000
+              </h2>
+              <div
+                className="h-px w-3/4 mx-auto mb-4"
+                style={{ background: "linear-gradient(to right, transparent, #63cad2, transparent)" }}
+              ></div>
+            </div>
+          </div>
+
+          {/* 3rd Prize (Bronze) - Third on Mobile */}
+          <div
+            className="w-full max-w-sm rounded-2xl p-6 shadow-lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.9)",
+              border: "2px solid #937b60",
+              backdropFilter: "blur(15px)",
+            }}
+          >
+            <div className="flex justify-center mb-6">
+              <img src={thirdpr || "/placeholder.svg"} alt="Third Prize" className="w-24 h-24 object-contain" />
+            </div>
+            <div className="text-center">
+              <span
+                className="inline-block px-3 py-1 text-xs font-medium rounded-full mb-4 tracking-wider"
+                style={{ background: "rgba(147, 123, 96, 0.2)", color: "#011446" }}
+              >
+                2ND RUNNER-UP
+              </span>
+              <h2 className="text-3xl font-bold mb-4" style={{ color: "#011446" }}>
+                ₹25,000
+              </h2>
+              <div
+                className="h-px w-3/4 mx-auto mb-4"
+                style={{ background: "linear-gradient(to right, transparent, #937b60, transparent)" }}
+              ></div>
+            </div>
+          </div>
+        </div>
+
         {/* Premium prize pool section */}
         <div
           className="rounded-3xl p-10 lg:p-12 shadow-2xl mb-16 transition-all duration-700"
@@ -214,9 +306,8 @@ const Prize = () => {
         {/* Executive CTA */}
         <div className="text-center mt-20">
           <p className="text-2xl lg:text-3xl mb-8 leading-relaxed max-w-4xl mx-auto" style={{ color: "#937b60" }}>
-           Boost your career by taking part in this exciting event that offers amazing rewards
+            Boost your career by taking part in this exciting event that offers amazing rewards
           </p>
-
         </div>
       </div>
     </div>
